@@ -30,7 +30,7 @@ endef
 
 define export_listings
 	@echo "Exporting listings"
-	@bash code/.venv/bin/python code/utils/export_listings.py
+	@code/.venv/bin/python code/utils/export_listings.py code output/listings.md
 endef
 
 define run_code
