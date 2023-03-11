@@ -11,15 +11,13 @@ a patterns.list file. (Note that pattern might not affect the tree creation.)
 """
 import re
 import sys
-
 from pathlib import Path
-from typing import Final
 from subprocess import check_output
+from typing import Final
 
 from pathspec import PathSpec
 
-
-PATTERNS_FILE: Final[str] = "patterns.list"
+PATTERNS_FILE: Final[str] = "code/utils/patterns.list"  # TODO: Do not hardcode
 with open(PATTERNS_FILE, "r") as fh:
     SPEC: Final[PathSpec] = PathSpec.from_lines("gitwildmatch", fh)
 
@@ -73,8 +71,8 @@ def main(proj_dir: Path, output_file: Path) -> None:
             print(f"Can not read: {name}")
 
     # compile to single file
-    tree = make_filetree(proj_dir)
-    tree = ""  # TODO: Remove
+    # tree = make_filetree(proj_dir)
+    tree = ""  # Dirty way to deactivate tree creation
     comp = "\n\n".join((tree, *code_blocks.values()))
     output_file.write_text(comp)
 

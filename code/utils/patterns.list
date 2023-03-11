@@ -13,4 +13,5 @@ source/
 *.env
 __init__.py
 output/
-utils/
+**/utils/
+pyproject.toml
