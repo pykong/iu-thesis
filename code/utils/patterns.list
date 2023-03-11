@@ -1,0 +1,16 @@
+.vscode/
+.venv/
+.pytest_cache/
+.mypy_cache/
+.git/
+.coverage
+__pycache__/
+poetry.lock
+data/
+build/
+source/
+*.db
+*.env
+__init__.py
+output/
+utils/
