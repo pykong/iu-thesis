@@ -47,5 +47,6 @@ define compile_thesis
 		--listings\
 		# --filter pandoc-plantuml\
 		--filter pandoc-crossref\
-		--citeproc
+		--citeproc\
+		--pdf-engine-opt=-shell-escape
 endef
