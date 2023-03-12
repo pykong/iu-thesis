@@ -1,0 +1,3 @@
+@startuml PlantUMLTest_B
+b->c
+@enduml

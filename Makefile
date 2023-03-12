@@ -26,6 +26,9 @@ export_listings:
 run_code:
 	$(run_code)
 
+generate_plantuml:
+	$(generate_plantuml)
+
 compile_thesis:
 	$(compile_thesis)
 
@@ -46,6 +49,10 @@ endef
 define run_code
 	@echo "Running all code"
 	@cd code; fish run_all.fish
+endef
+
+define generate_plantuml
+	@plantuml plantuml/*.puml -tsvg -o ../output/plantuml
 endef
 
 define attach_cover
@@ -84,7 +91,6 @@ define compile_thesis
 		--filter pandoc-crossref\
 		--listings\
 		--citeproc\
-		# --filter pandoc-plantuml\
 		--pdf-engine-opt=-shell-escape
 	$(attach_cover)
 	$(resize_pdf)
