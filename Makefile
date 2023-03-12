@@ -50,6 +50,6 @@ define compile_thesis
 		--citeproc\
 		--pdf-engine-opt=-shell-escape
 	@pdfunite output/cover.pdf output/thesis.pdf output/merged.pdf
-	@pdfjam --outfile output/merged.pdf --paper a4paper output/merged.pdf
+	@pdfjam --outfile output/merged.pdf --paper a4paper --offset '0.0cm 0.6mm' output/merged.pdf
 	@mv output/merged.pdf output/$$(date '+%Y%m%d')_Felder_Benjamin_3200856_DLMAIIAC01.pdf
 endef
