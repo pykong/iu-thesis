@@ -45,10 +45,12 @@ $$X \sim Bern(p=for) = Bern(p = 0.03)$${#eq:Bernoulli}
 
 This gives us the following proportions:
 
-\begin{align*}
+$$
+\begin{aligned}
 P(vote=for) &= 0.03\\
 P(vote=against) &= 1 - p = 0.97
-\end{align*}
+\end{aligned}
+$${#eq:multi_line}
 
 These proportions can be best visualized with a column chart^[A “[lollipop chart](https://datavizproject.com/data-type/lollipop-chart/)” might be even more suitable to visualize a discrete distribution. However, Matplotlib does not offer an appropriate plot type for building those.] as generated via [@lst:1_1_Bernoulli_py]:
 
@@ -79,3 +81,4 @@ Test refering to "PlantUML Test A" [@fig:plantuml_test_a]
 \newpage
 
 # Listings {-}
+$$
