@@ -67,9 +67,9 @@ define compile_thesis
 		--from markdown\
 		--template=template/eisvogel.latex\
 		--listings\
+		--citeproc\
 		# --filter pandoc-plantuml\
 		--filter pandoc-crossref\
-		--citeproc\
 		--pdf-engine-opt=-shell-escape
 	$(attach_cover)
 	$(resize_pdf)
