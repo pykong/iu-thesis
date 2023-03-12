@@ -23,7 +23,6 @@ compile_thesis:
 define cover_page
 	@echo "Creating cover page"
 	@pdflatex\
-		-aux-directory=/tmp\
 		-output-directory=output\
 		-quiet\
 		./template/cover.tex
