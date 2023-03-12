@@ -1,4 +1,4 @@
-SHELL = /usr/bin/fish
+SHELL = /usr/bin/bash
 
 
 build:
@@ -51,5 +51,5 @@ define compile_thesis
 		--pdf-engine-opt=-shell-escape
 	@pdfunite output/cover.pdf output/thesis.pdf output/final.pdf
 	@pdfjam --outfile output/finala4.pdf --paper a4paper output/final.pdf
-	@mv output/finala4.pdf output/"$(date '+%Y%m%d')"_Felder_Benjamin_3200856_DLMAIIAC01.pdf
+	@mv output/finala4.pdf "output/$$(date '+%Y%m%d')_Felder_Benjamin_3200856_DLMAIIAC01.pdf"
 endef
