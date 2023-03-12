@@ -50,4 +50,5 @@ define compile_thesis
 		--citeproc\
 		--pdf-engine-opt=-shell-escape
 	@pdfunite output/cover.pdf output/thesis.pdf output/final.pdf
+	@pdfjam --outfile output/finala4.pdf --paper a4paper output/final.pdf
 endef
