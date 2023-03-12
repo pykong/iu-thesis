@@ -25,7 +25,7 @@ csl: bib/apa.csl
 # additional LaTeX packages
 header-includes:
   - \usepackage{pdfpages}
-  - \inputencoding{latin2}
+#   - \inputencoding{latin2}
 ---
 
 # Basic Probabilities and Visualizations (1)
