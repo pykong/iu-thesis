@@ -38,18 +38,32 @@ define run_code
 	@cd code; fish run_all.fish
 endef
 
+define attach_cover
+	@pdfunite output/cover.pdf output/thesis.pdf output/merged.pdf
+endef
+
+define resize_pdf
+	# normalize all pages of pdf to DINA4
+	# offset needed to prevent white line above triangle on cover page
+	@pdfjam --outfile output/merged.pdf --paper a4paper --offset '0.0cm 0.6mm' output/merged.pdf
+endef
+
+define rename_pdf
+	@mv output/merged.pdf output/$$(date '+%Y%m%d')_Felder_Benjamin_3200856_DLMAIIAC01.pdf
+endef
+
 define compile_thesis
 	@echo "Compiling thesis"
 	@pandoc\
 		thesis.md output/listings.md -o output/thesis.pdf\
-		--from markdown\
+		--from markdown\gitgi
 		--template=template/eisvogel.latex\
 		--listings\
 		# --filter pandoc-plantuml\
 		--filter pandoc-crossref\
 		--citeproc\
 		--pdf-engine-opt=-shell-escape
-	@pdfunite output/cover.pdf output/thesis.pdf output/merged.pdf
-	@pdfjam --outfile output/merged.pdf --paper a4paper --offset '0.0cm 0.6mm' output/merged.pdf
-	@mv output/merged.pdf output/$$(date '+%Y%m%d')_Felder_Benjamin_3200856_DLMAIIAC01.pdf
+	$(attach_cover)
+	$(resize_pdf)
+	$(rename_pdf)
 endef
