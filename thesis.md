@@ -68,6 +68,18 @@ $$\int f(x) \; dx = F(x) + c$${#eq:int_const}
 
 \newpage
 
+Forcing alignment for numbered multiline equation, as a workaround of last-resorts. This is only a measure of despair, defying the purpose of a typsetting engine altogether.
+
+$$\hspace*{0mm} a = b + c -t +u$${#eq:eq_tst_1}
+\vspace*{-10mm}
+
+$$\hspace*{-8mm} c = a - b -t$${#eq:eq_tst_2}
+
+\vspace*{-5mm}
+$$\hspace*{-22mm} b - f = a - c$${#eq:eq_tst_3}
+
+\newpage
+
 ![PlantUML Test A](output/plantuml/PlantUMLTest_A.svg){#fig:plantuml_test_a width=30%}
 
 Test refering to "PlantUML Test A" [@fig:plantuml_test_a]
