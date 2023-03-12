@@ -56,7 +56,7 @@ define compile_thesis
 	@echo "Compiling thesis"
 	@pandoc\
 		thesis.md output/listings.md -o output/thesis.pdf\
-		--from markdown\gitgi
+		--from markdown\
 		--template=template/eisvogel.latex\
 		--listings\
 		# --filter pandoc-plantuml\
