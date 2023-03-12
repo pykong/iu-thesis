@@ -49,4 +49,5 @@ define compile_thesis
 		--filter pandoc-crossref\
 		--citeproc\
 		--pdf-engine-opt=-shell-escape
+	@pdfunite output/cover.pdf output/thesis.pdf output/final.pdf
 endef

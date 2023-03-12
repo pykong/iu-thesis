@@ -6,7 +6,7 @@ keywords: [statistics, Bayesian]
 
 # general document config
 lang: "en"
-titlepage: true
+titlepage: false
 toc: true
 toc-own-page: true
 listings: true
