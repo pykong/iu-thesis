@@ -66,10 +66,10 @@ define compile_thesis
 		thesis.md output/listings.md -o output/thesis.pdf\
 		--from markdown\
 		--template=template/eisvogel.latex\
+		--filter pandoc-crossref\
 		--listings\
 		--citeproc\
 		# --filter pandoc-plantuml\
-		--filter pandoc-crossref\
 		--pdf-engine-opt=-shell-escape
 	$(attach_cover)
 	$(resize_pdf)
