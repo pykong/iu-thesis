@@ -1,5 +1,13 @@
+# https://learnxinyminutes.com/docs/make/
 SHELL = /usr/bin/bash
 
+# output file name
+DATE = $$(date '+%Y%m%d')
+FNAME = Benjamin
+LNAME = Felder
+MAT_NUM = 3200856
+COURSE_ID = DLMAIIAC01
+OUTPUT_FILE = ${DATE}_${LNAME}_${FNAME}_${MAT_NUM}_${COURSE_ID}.pdf
 
 build:
 	$(cover_page)
@@ -49,7 +57,7 @@ define resize_pdf
 endef
 
 define rename_pdf
-	@mv output/merged.pdf output/$$(date '+%Y%m%d')_Felder_Benjamin_3200856_DLMAIIAC01.pdf
+	@mv output/merged.pdf output/${OUTPUT_FILE}
 endef
 
 define compile_thesis
