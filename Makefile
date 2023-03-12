@@ -23,9 +23,10 @@ compile_thesis:
 define cover_page
 	@echo "Creating cover page"
 	@pdflatex\
-		./template/cover.tex -output-directory=output\
 		-aux-directory=/tmp\
-		-quiet
+		-output-directory=output\
+		-quiet\
+		./template/cover.tex
 endef
 
 define export_listings
