@@ -70,6 +70,8 @@ $$\int f(x) \; dx = F(x) + c$${#eq:int_const}
 
 ## Multi-line equations
 
+Labelling, aligning and referencing multi-line equations, difficult using pandoc and pandoc-crossref (https://github.com/lierdakil/pandoc-crossref/issues/131). The following example shows how it can be done nonetheless. This does not require any hacks, workarounds or any additional logic.
+
 \begin{align}
 1 + 0 & = 1, \label{eq1} \\
 1 + 1 & = 2. \label{eq2}
