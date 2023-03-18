@@ -89,6 +89,7 @@ define compile_thesis
 		--from markdown\
 		--template=template/eisvogel.latex\
 		--filter pandoc-crossref\
+		--filter pandoc-include\
 		--listings\
 		--citeproc\
 		--pdf-engine-opt=-shell-escape

@@ -58,6 +58,18 @@ These proportions can be best visualized with a column chart^[A “[lollipop cha
 
 \newpage
 
+# Code Sample 1
+
+Include entire python file and reference, using pandoc-include.
+
+```{#lst:code1 caption="Listing caption"}
+!include ./code/example.py
+```
+
+Heyho, referencing [@lst:code1].
+
+\newpage
+
 # Notes {-}
 
 ## Constant of integration
