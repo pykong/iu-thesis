@@ -15,3 +15,9 @@ Consult the Eisvogel installation instructions:
 https://github.com/Wandmalfarbe/pandoc-latex-template#installation
 
 Note: Installing MikTeX caused compile errors.
+
+## Citation Styles
+
+Get them from here:
+
+https://github.com/citation-style-language/styles
