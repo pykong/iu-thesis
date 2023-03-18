@@ -21,3 +21,7 @@ Note: Installing MikTeX caused compile errors.
 Get them from here:
 
 https://github.com/citation-style-language/styles
+
+## Links
+
+https://pandoc.org/MANUAL.html#pandocs-markdown
