@@ -25,3 +25,5 @@ https://github.com/citation-style-language/styles
 ## Links
 
 https://pandoc.org/MANUAL.html#pandocs-markdown
+https://learnxinyminutes.com/docs/make/
+https://lierdakil.github.io/pandoc-crossref/
