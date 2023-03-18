@@ -68,15 +68,28 @@ $$\int f(x) \; dx = F(x) + c$${#eq:int_const}
 
 \newpage
 
-Forcing alignment for numbered multiline equation, as a workaround of last-resorts. This is only a measure of despair, defying the purpose of a typsetting engine altogether.
+## Multi-line equations
 
-$$\hspace*{0mm} a = b + c -t +u$${#eq:eq_tst_1}
-\vspace*{-10mm}
+\begin{align}
+1 + 0 & = 1, \label{eq1} \\
+1 + 1 & = 2. \label{eq2}
+\end{align}
 
-$$\hspace*{-8mm} c = a - b -t$${#eq:eq_tst_2}
+\begin{align*}
+1 + 2 = 3 \\
+3 + 2 = 5
+\end{align*}
 
-\vspace*{-5mm}
-$$\hspace*{-22mm} b - f = a - c$${#eq:eq_tst_3}
+$$ a = b + c $$ {#eq:ggg}
+
+\begin{align}
+f(x) &= x + a \label{eq:one} \\
+g(x) &= a x \label{eq:two} \\
+e           &= x * mc ** 2 \label{eq:emcsquared}
+\end{align}
+
+Holla [@eq:ggg]
+Hey, equations [@eq:one], [@eq:two] and [@eq:emcsquared]
 
 \newpage
 
