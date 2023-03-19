@@ -8,6 +8,7 @@ keywords: [statistics, Bayesian]
 # title page
 titlepage: false
 include-before:
+  - \newdateformat{germandt}{\twodigit{\THEDAY}.\twodigit{\THEMONTH}.\THEYEAR}
   - \input{template/cover.tex}
 
 # general document config
@@ -28,7 +29,9 @@ bibliography: [bib/refs.bib]
 csl: bib/apa.csl
 #
 # additional LaTeX packages
-# header-includes:
+header-includes:
+  - \usepackage{datetime}
+  - \usepackage[ngerman, num]{isodate}
 #   - \inputencoding{latin2}
 ---
 
