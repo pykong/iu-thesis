@@ -8,7 +8,7 @@ keywords: [statistics, Bayesian]
 # title page
 titlepage: false
 include-before:
-  - \includepdf{output/cover.pdf}
+  - \input{template/cover.tex}
 
 # general document config
 lang: "en"

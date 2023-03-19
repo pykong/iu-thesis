@@ -1,15 +1,4 @@
-\documentclass{article}
-\usepackage[utf8]{inputenc}
-
-% Page Size: DIN A4 : 210mm x 297mm
-\usepackage[paperwidth=210mm,paperheight=297mm,margin=1in]{geometry}
-\usepackage{graphicx}
-\usepackage{tikz}
-\usepackage{datetime}
-
-\newdateformat{germandatetime}{\twodigit{\THEDAY}.\twodigit{\THEMONTH}.\THEYEAR}
-\usetikzlibrary{calc,positioning}
-\definecolor{MyGray1}{RGB}{122,141,148}
+% \definecolor{MyGray1}{RGB}{122,141,148}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -20,7 +9,7 @@
 \def\Mycourse{DLMAIIAC01 - Inference and Causality}
 \def\Myauthor{Benjamin Felder}
 \def\MyMatricNum{3200856}
-\def\Mydate{\germandatetime\today}
+% \def\Mydate{\germandatetime\today}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -38,35 +27,23 @@
 \def\RFunctionC{}
 \def\RInstitutionC{}
 
-\begin{document}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Begin Page
+%%%%%%%%%%%%%%%%%%%%%%%%%%
 \thispagestyle{empty}
 
 % Triangle and Course logo
-\newgeometry{top=0.2in,bottom=2in,right=0.2in,left=0.5in}
-\begin{tikzpicture}[overlay,remember picture,line width=5pt]
-    % set a new origin [1]
-    \coordinate (O) at (current page.south west);
-    \draw[MyGray1,fill=MyGray1] ($(current page.east)+(0,0.75in)$) -- (current page.north east) -- ($(current page.north)+(-0.75in,0)$) -- ($(current page.east)+(0.05,0.75in)$);
-\end{tikzpicture}
-
-% Triangle and Course logo
-\includegraphics[width=3.75in]{template/img/logo.png}\hspace*{\fill}\includegraphics[width=1.8in]{template/img/program_logo.png}
+% \includegraphics[width=3.75in]{template/img/logo.png}\hspace*{\fill}\includegraphics[width=1.8in]{template/img/program_logo.png}
 
 \vspace{18em}
 
 % Main Text Block
 {\Large \Mysubtitle}\\
-
-{\Huge \bf\Mytitle}\\
-
-{\LARGE \bf\Mycourse}\\
-
+{\Huge \Mytitle}\\
+{\LARGE \Mycourse}\\
 {\LARGE \Myauthor}\\
-
 {\Large Mat. No.: \MyMatricNum}\\
-
-{\it\Mydate}
+% {\Mydate}
 
 \vspace*{\fill}
 
@@ -82,5 +59,3 @@
 
 
 \clearpage
-
-\end{document}

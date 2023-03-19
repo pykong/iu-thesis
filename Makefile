@@ -12,13 +12,9 @@ COURSE_ID = DLMAIIAC01
 OUTPUT_FILE = ${DATE}_${LNAME}_${FNAME}_${MAT_NUM}_${COURSE_ID}.pdf
 
 build:
-	$(cover_page)
 	$(export_listings)
 	$(run_code)
 	$(compile_thesis)
-
-cover_page:
-	$(cover_page)
 
 export_listings:
 	$(export_listings)
@@ -35,14 +31,6 @@ compile_thesis:
 compile_complete_document:
 	$(compile_complete_document)
 
-
-define cover_page
-	@echo "Creating cover page"
-	@pdflatex\
-		-output-directory=output\
-		-quiet\
-		./template/cover.tex
-endef
 
 define export_listings
 	@echo "Exporting listings"
