@@ -1,4 +1,5 @@
 ---
+# metadata
 title: "Inference and Causality - Workbook Assignment"
 author: "Benjamin Felder"
 subject: "Markdown"

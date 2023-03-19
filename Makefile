@@ -62,15 +62,6 @@ define attach_cover
 	@pdftk output/cover.pdf output/thesis.pdf cat output output/merged.pdf
 endef
 
-define add_metadata
-	@pdfjam\
-		--outfile output/${OUTPUT_FILE}\
-		--pdfauthor "${FNAME} ${LNAME}"\
-		--pdftitle ${PDF_TITLE}\
-		--pdfsubject "Assignment for ${COURSE_ID}"\
-		output/${OUTPUT_FILE}
-endef
-
 define rename_pdf
 	@mv output/merged.pdf output/${OUTPUT_FILE}
 endef
