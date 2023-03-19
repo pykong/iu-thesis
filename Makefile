@@ -32,6 +32,9 @@ generate_plantuml:
 compile_thesis:
 	$(compile_thesis)
 
+compile_complete_document:
+	$(compile_complete_document)
+
 
 define cover_page
 	@echo "Creating cover page"
@@ -98,7 +101,7 @@ endef
 define compile_complete_document
 	$(compile_thesis)
 	$(attach_cover)
-	$(resize_pdf)
-	$(rename_pdf)
-	$(add_metadata)
+	# $(resize_pdf)
+	# $(rename_pdf)
+	# $(add_metadata)
 endef
