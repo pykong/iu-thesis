@@ -26,10 +26,9 @@ caption-justification: centering
 link-citations: true
 bibliography: [bib/refs.bib]
 csl: bib/apa.csl
-
+#
 # additional LaTeX packages
-header-includes:
-  - \usepackage{pdfpages}
+# header-includes:
 #   - \inputencoding{latin2}
 ---
 
