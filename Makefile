@@ -62,20 +62,6 @@ define attach_cover
 	@pdftk output/cover.pdf output/thesis.pdf cat output output/merged.pdf
 endef
 
-define resize_pdf
-	# normalize all pages of pdf to DINA4
-	# offset needed to prevent white line above triangle on cover page
-	@pdfjam\
-		--outfile output/merged.pdf\
-		--paper a4paper\
-		--offset '0.0cm 0.6mm'\
-		output/merged.pdf
-endef
-
-define rename_pdf
-	@mv output/merged.pdf output/${OUTPUT_FILE}
-endef
-
 define add_metadata
 	@pdfjam\
 		--outfile output/${OUTPUT_FILE}\
@@ -85,10 +71,15 @@ define add_metadata
 		output/${OUTPUT_FILE}
 endef
 
+define rename_pdf
+	@mv output/merged.pdf output/${OUTPUT_FILE}
+endef
+
 define compile_thesis
 	@echo "Compiling thesis"
 	@pandoc\
 		thesis.md output/listings.md -o output/thesis.pdf\
+		-s -V papersize:a4\
 		--from markdown\
 		--template=template/eisvogel.latex\
 		--filter pandoc-crossref\
@@ -101,7 +92,5 @@ endef
 define compile_complete_document
 	$(compile_thesis)
 	$(attach_cover)
-	$(resize_pdf)
 	$(rename_pdf)
-	$(add_metadata)
 endef
