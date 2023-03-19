@@ -59,7 +59,7 @@ define generate_plantuml
 endef
 
 define attach_cover
-	@pdfunite output/cover.pdf output/thesis.pdf output/merged.pdf
+	@pdftk output/cover.pdf output/thesis.pdf cat output output/merged.pdf
 endef
 
 define resize_pdf
@@ -101,7 +101,7 @@ endef
 define compile_complete_document
 	$(compile_thesis)
 	$(attach_cover)
-	# $(resize_pdf)
-	# $(rename_pdf)
-	# $(add_metadata)
+	$(resize_pdf)
+	$(rename_pdf)
+	$(add_metadata)
 endef
