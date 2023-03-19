@@ -1,5 +1,5 @@
 % \definecolor{MyGray1}{RGB}{122,141,148}
-
+\newdateformat{germandatetime}{\twodigit{\THEDAY}.\twodigit{\THEMONTH}.\THEYEAR}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Title Information
@@ -9,7 +9,7 @@
 \def\Mycourse{DLMAIIAC01 - Inference and Causality}
 \def\Myauthor{Benjamin Felder}
 \def\MyMatricNum{3200856}
-% \def\Mydate{\germandatetime\today}
+\def\Mydate{\germandatetime\today}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -44,7 +44,7 @@
 {\LARGE \Mycourse}\\
 {\LARGE \Myauthor}\\
 {\Large Mat. No.: \MyMatricNum}\\
-{\germandt\today}
+{\Large \Mydate}
 
 \vspace*{\fill}
 
