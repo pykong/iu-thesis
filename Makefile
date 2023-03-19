@@ -15,7 +15,7 @@ build:
 	$(cover_page)
 	$(export_listings)
 	$(run_code)
-	$(compile_thesis)
+	$(compile_complete_document)
 
 cover_page:
 	$(cover_page)
@@ -93,6 +93,10 @@ define compile_thesis
 		--listings\
 		--citeproc\
 		--pdf-engine-opt=-shell-escape
+endef
+
+define compile_complete_document
+	$(compile_thesis)
 	$(attach_cover)
 	$(resize_pdf)
 	$(rename_pdf)
