@@ -10,6 +10,11 @@ titlepage: false
 include-before:
   - \input{template/cover.tex}
 
+# additional LaTeX packages
+header-includes:
+  - \usepackage{datetime}
+  # - \inputencoding{latin2}
+
 # general document config
 lang: "en"
 toc: true
@@ -26,11 +31,6 @@ caption-justification: centering
 link-citations: true
 bibliography: [bib/refs.bib]
 csl: bib/apa.csl
-#
-# additional LaTeX packages
-header-includes:
-  - \usepackage{datetime}
-#   - \inputencoding{latin2}
 ---
 
 # Basic Probabilities and Visualizations (1)
