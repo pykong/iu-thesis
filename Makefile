@@ -15,7 +15,7 @@ build:
 	$(cover_page)
 	$(export_listings)
 	$(run_code)
-	$(compile_complete_document)
+	$(compile_thesis)
 
 cover_page:
 	$(cover_page)
@@ -58,18 +58,10 @@ define generate_plantuml
 	@plantuml plantuml/*.puml -tsvg -o ../output/plantuml
 endef
 
-define attach_cover
-	@pdftk output/cover.pdf output/thesis.pdf cat output output/merged.pdf
-endef
-
-define rename_pdf
-	@mv output/merged.pdf output/${OUTPUT_FILE}
-endef
-
 define compile_thesis
 	@echo "Compiling thesis"
 	@pandoc\
-		thesis.md output/listings.md -o output/thesis.pdf\
+		thesis.md output/listings.md -o output/${OUTPUT_FILE}\
 		-s -V papersize:a4\
 		--from markdown\
 		--template=template/eisvogel.latex\
@@ -78,10 +70,4 @@ define compile_thesis
 		--listings\
 		--citeproc\
 		--pdf-engine-opt=-shell-escape
-endef
-
-define compile_complete_document
-	$(compile_thesis)
-	$(attach_cover)
-	$(rename_pdf)
 endef

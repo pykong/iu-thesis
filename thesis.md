@@ -5,9 +5,13 @@ author: "Benjamin Felder"
 subject: "Markdown"
 keywords: [statistics, Bayesian]
 
+# title page
+titlepage: false
+include-before:
+  - \includepdf{output/cover.pdf}
+
 # general document config
 lang: "en"
-titlepage: false
 toc: true
 toc-own-page: true
 listings: true
