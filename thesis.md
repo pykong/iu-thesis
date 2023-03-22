@@ -1,14 +1,18 @@
 ---
 # document metadata
-title: "Inference and Causality - Workbook Assignment"
+title: "Workbook for Inference and Causality"
 author: "Benjamin Felder"
-subject: "Markdown"
+subject: "Workbook Assignment"
 keywords: [statistics, Bayesian]
+
+course-id: DLMAIIAC01
+course-name: "Inference and Causality"
+mat-number: "3200856"
+reviewers:
+  - { name: "John Doe", function: "Tutor", institution: "Duff Corp" }
 
 # title page
 titlepage: false
-include-before:
-  - \input{template/cover.tex}
 
 # additional LaTeX packages
 header-includes:
@@ -122,7 +126,7 @@ Test refering to "PlantUML Test A" [@fig:plantuml_test_a]
 # References {-}
 </div>
 
-\newpage
+
 
 # Listings {-}
 $$
