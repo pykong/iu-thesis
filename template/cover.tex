@@ -1,20 +1,5 @@
 \newdateformat{germandatetime}{\twodigit{\THEDAY}.\twodigit{\THEMONTH}.\THEYEAR}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Reviewers Information
-%%%%%%%%%%%%%%%%%%%%%%%%%%
-\def\RNameA{Dr.\ Bertram Taetz}
-\def\RFunctionA{Tutor DLMAIIAC01}
-\def\RInstitutionA{International University}
-
-\def\RNameB{}
-\def\RFunctionB{}
-\def\RInstitutionB{}
-
-\def\RNameC{}
-\def\RFunctionC{}
-\def\RInstitutionC{}
-
+\newenvironment{myblock}{\center}{\endcenter}
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Begin Page
 %%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -38,9 +23,15 @@
 
 %  Reviewers Block
 \begin{tabular}{p{0.8in} p{1.5in} p{1.5in} p{1.5in}}
-    \textbf{Reviewers:} & \RNameA{}        & \RNameB{}        & \RNameC{}        \\
-                        & \RFunctionA{}    & \RFunctionB{}    & \RFunctionC{}    \\
-                        & \RInstitutionA{} & \RInstitutionB{} & \RInstitutionC{}
+    \textbf{Reviewers:} &
+    $for(reviewers)$
+        \begin{myblock}
+        $it.name$ \break{}
+        $it.function$ \break{}
+        $it.institution$
+        \end{myblock} &
+    $endfor$
+
 \end{tabular}
 
 
