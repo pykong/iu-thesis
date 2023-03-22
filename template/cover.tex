@@ -1,5 +1,5 @@
 \newdateformat{germandatetime}{\twodigit{\THEDAY}.\twodigit{\THEMONTH}.\THEYEAR}
-\newenvironment{myblock}{\center}{\endcenter}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Begin Page
 %%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -25,11 +25,11 @@
 \begin{tabular}{p{0.8in} p{1.5in} p{1.5in} p{1.5in}}
     \textbf{Reviewers:} &
     $for(reviewers)$
-        \begin{myblock}
+        \begin{flushleft}
         $it.name$ \break{}
         $it.function$ \break{}
         $it.institution$
-        \end{myblock} &
+        \end{flushleft} &
     $endfor$
 
 \end{tabular}
