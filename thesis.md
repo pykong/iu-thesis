@@ -1,6 +1,6 @@
 ---
 # document metadata
-title: "Workbook for Inference and Causality"
+title: "Inference and Causality"
 author: "Benjamin Felder"
 subject: "Workbook Assignment"
 keywords: [statistics, Bayesian]
