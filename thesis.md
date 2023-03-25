@@ -117,8 +117,7 @@ Test refering to "PlantUML Test A" [@fig:plantuml_test_a]
 
 # Listings {-}
 
-```md
 !include output/listings.md
-```
+
 
 $$
