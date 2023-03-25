@@ -17,7 +17,7 @@
 {\LARGE $course-id$\ -\ $course-name$}\\
 {\LARGE $author$}\\
 {\Large Mat. No.: $mat-number$}\\
-{\Large \germandatetime\today}
+{\Large \textit{\germandatetime\today}}
 
 \vspace*{\fill}
 
@@ -25,11 +25,13 @@
 \begin{tabular}{p{0.9in} p{1.5in} p{1.5in} p{1.5in}}
     \textbf{Reviewers:} &
     $for(reviewers)$
+        \begin{spacing}{0.75}
         \begin{tabular}[t]{l}
             $it.name$  \\
             $it.function$  \\
             $it.institution$ \\
-        \end{tabular} &
+        \end{tabular}
+        \end{spacing} &
     $endfor$
 \end{tabular}
 
