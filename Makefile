@@ -57,5 +57,6 @@ define compile_thesis
 		--filter pandoc-include\
 		--listings\
 		--citeproc\
-		--pdf-engine-opt=-shell-escape
+		--pdf-engine-opt=-shell-escape\
+		--metadata-file=variables.yaml
 endef

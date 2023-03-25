@@ -1,17 +1,4 @@
 ---
-# document metadata
-title: "Inference and Causality"
-author: "Benjamin Felder"
-subject: "Workbook Assignment"
-keywords: [statistics, Bayesian]
-
-course-id: DLMAIIAC01
-course-name: "Inference and Causality"
-mat-number: "3200856"
-reviewers:
-  - { name: "John Doe", function: "Tutor", institution: "Duff Corp" }
-  - { name: "Jane Doe", function: "Prof", institution: "ACME Corp" }
-
 # title page
 titlepage: false
 
