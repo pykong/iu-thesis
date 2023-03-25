@@ -22,6 +22,12 @@ Get them from here:
 
 https://github.com/citation-style-language/styles
 
+## Cover Page Hack
+
+The title page section has been overwritten in the Eisvogel template with a pandoc template partial, in order to provide a custom cover that can still expand pandoc's variables. See issue on the Eisvogel GitHub for further details:
+
+https://github.com/Wandmalfarbe/pandoc-latex-template/issues/260
+
 ## Links
 
 https://pandoc.org/MANUAL.html#pandocs-markdown
