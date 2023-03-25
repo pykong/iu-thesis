@@ -31,7 +31,7 @@ def make_code_block(name: Path, code: str) -> str:
     clean_caption = re.sub("_", "", str(name))
     cleaned_name = re.sub("[^a-zA-Z0-9_]", "_", str(name))
     label = "{#lst:" + cleaned_name + " " + name.suffix + "}"
-    return f"Listing: `{clean_caption}`\n```{label}\n{code}```"
+    return f"Listing: `{clean_caption}`\n```{label}\n{code}\n```"
 
 
 def make_filetree(p: Path) -> str:
@@ -64,9 +64,10 @@ def main(proj_dir: Path, output_file: Path) -> None:
     # creat code blocks fron list of files_
     code_blocks = {}
     for p in files_:
-        name = p.relative_to(proj_dir)
+        name = p.relative_to(proj_dir.parent)
+        code_ref = f"!include ../{name}"
         try:
-            code_blocks[name] = make_code_block(name, p.read_text())
+            code_blocks[name] = f"```\n{code_ref}\n```"
         except Exception:
             print(f"Can not read: {name}")
 
