@@ -49,12 +49,10 @@ define compile_thesis
 	@pandoc\
 		thesis.md output/listings.md -o output/${OUTPUT_FILE}\
 		-s -V papersize:a4\
-		--from markdown\
 		--template=template/eisvogel.latex\
 		--metadata-file=variables.yaml\
 		--filter pandoc-crossref\
 		--filter pandoc-include\
 		--listings\
-		--citeproc\
-		--pdf-engine-opt=-shell-escape
+		--citeproc
 endef
