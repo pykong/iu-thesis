@@ -42,6 +42,14 @@ pipx install niet
 sudo apt install plantuml
 ```
 
+### pandoc-include
+
+https://github.com/DCsunset/pandoc-include
+
+```sh
+pipx install pandoc-include
+```
+
 ## Links
 
 https://pandoc.org/MANUAL.html#pandocs-markdown
