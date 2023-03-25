@@ -1,8 +1,6 @@
 # https://learnxinyminutes.com/docs/make/
 SHELL = /usr/bin/bash
 
-PDF_TITLE = "Workbook for Inference and Causality"
-
 # output file name
 DATE = $$(date '+%Y%m%d')
 FNAME = Benjamin
