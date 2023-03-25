@@ -115,7 +115,10 @@ Test refering to "PlantUML Test A" [@fig:plantuml_test_a]
 # References {-}
 </div>
 
-
-
 # Listings {-}
+
+```md
+!include output/listings.md
+```
+
 $$

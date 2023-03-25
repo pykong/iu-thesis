@@ -49,7 +49,7 @@ endef
 define compile_thesis
 	@echo "Compiling thesis"
 	@pandoc\
-		thesis.md output/listings.md -o output/${OUTPUT_FILE}\
+		thesis.md -o output/${OUTPUT_FILE}\
 		-s -V papersize:a4\
 		--template=template/eisvogel.latex\
 		--metadata-file=variables.yaml\
