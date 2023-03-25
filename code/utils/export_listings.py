@@ -26,12 +26,9 @@ def make_markdown(suffix: str, text: str) -> str:
     return f"```{suffix}\n{text}\n```"
 
 
-def make_code_block(name: Path, code: str) -> str:
-    # https://github.com/lierdakil/pandoc-crossref/issues/278
-    clean_caption = re.sub("_", "", str(name))
-    cleaned_name = re.sub("[^a-zA-Z0-9_]", "_", str(name))
-    label = "{#lst:" + cleaned_name + " " + name.suffix + "}"
-    return f"Listing: `{clean_caption}`\n```{label}\n{code}\n```"
+def make_block_info(name: Path) -> str:
+    clean_name = re.sub("[^a-zA-Z0-9_]", "_", str(name))
+    return f'{{#lst:{clean_name} caption="{name}" {name.suffix}}}'
 
 
 def make_filetree(p: Path) -> str:
@@ -66,8 +63,9 @@ def main(proj_dir: Path, output_file: Path) -> None:
     for p in files_:
         name = p.relative_to(proj_dir.parent)
         code_ref = f"!include ../{name}"
+        block_info = make_block_info(name)
         try:
-            code_blocks[name] = f"```\n{code_ref}\n```"
+            code_blocks[name] = f"```{block_info}\n{code_ref}\n```"
         except Exception:
             print(f"Can not read: {name}")
 
