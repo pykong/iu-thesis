@@ -25,14 +25,12 @@
 \begin{tabular}{p{0.9in} p{1.5in} p{1.5in} p{1.5in}}
     \textbf{Reviewers:} &
     $for(reviewers)$
-        \vspace*{-6.7mm}
-        \begin{flushleft}
-        $it.name$ \break{}
-        $it.function$ \break{}
-        $it.institution$
-        \end{flushleft} &
+        \begin{tabular}[t]{l}
+            $it.name$  \\
+            $it.function$  \\
+            $it.institution$ \\
+        \end{tabular} &
     $endfor$
-
 \end{tabular}
 
 
