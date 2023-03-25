@@ -1,5 +1,5 @@
 \newdateformat{germandatetime}{\twodigit{\THEDAY}.\twodigit{\THEMONTH}.\THEYEAR}
-
+\newenvironment{ppl}{\fontfamily{ppl}\selectfont}{\par}
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Begin Page
 %%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -12,16 +12,19 @@
 \vspace{8.5em}
 
 % Main Text Block
+\begin{ppl}
 {\Large $subject$}\\
 {\Huge $title$}\\
 {\LARGE $course-id$\ -\ $course-name$}\\
 {\LARGE $author$}\\
 {\Large Mat. No.: $mat-number$}\\
 {\Large \textit{\germandatetime\today}}
+\end{ppl}
 
 \vspace*{\fill}
 
 %  Reviewers Block
+\begin{ppl}
 \begin{tabular}{p{0.9in} p{1.5in} p{1.5in} p{1.5in}}
     \textbf{Reviewers:} &
     $for(reviewers)$
@@ -34,7 +37,7 @@
         \end{spacing} &
     $endfor$
 \end{tabular}
-
+\end{ppl}
 
 \restoregeometry{}
 \clearpage
