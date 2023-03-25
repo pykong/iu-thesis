@@ -3,8 +3,8 @@ SHELL = /usr/bin/bash
 
 # output file name
 DATE = $$(date '+%Y%m%d')
-FNAME = Benjamin
-LNAME = Felder
+FNAME = $$(niet first-name variables.yaml)
+LNAME = $$(niet last-name variables.yaml)
 MAT_NUM = $$(niet mat-number variables.yaml)
 COURSE_ID = $$(niet course-id variables.yaml)
 OUTPUT_FILE = ${DATE}_${LNAME}_${FNAME}_${MAT_NUM}_${COURSE_ID}.pdf
