@@ -1,4 +1,5 @@
 \newdateformat{germandatetime}{\twodigit{\THEDAY}.\twodigit{\THEMONTH}.\THEYEAR}
+\newenvironment{titleblock}{\fontfamily{ppl}\selectfont}{\par}
 \newenvironment{ppl}{\fontfamily{ppl}\selectfont}{\par}
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Begin Page
@@ -12,16 +13,14 @@
 \vspace{8.5em}
 
 % Main Text Block
-\begin{ppl}
-\begin{spacing}{1.5}
-    {\Large $subject$}\medskip\\
-    {\Huge\textbf{$title$}}\\
-    {\huge $course-id$}\\
-    {\huge $author$}\\
-    {\Large Student Id: $mat-number$}\medskip\\
-    {\Large \textit{\germandatetime\today}}
-\end{spacing}
-\end{ppl}
+\begin{titleblock}
+    \LARGE{$subject$}\medskip\\
+    \HUGE\textbf{$title$}\\
+    \Huge{$course-id$}\\
+    \Huge{$author$}\\
+    \LARGE{Student Id: $mat-number$}\medskip\\
+    \LARGE\textit{\germandatetime\today}
+\end{titleblock}
 
 \vspace*{\fill}
 
