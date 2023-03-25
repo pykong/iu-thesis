@@ -51,10 +51,10 @@ define compile_thesis
 		-s -V papersize:a4\
 		--from markdown\
 		--template=template/eisvogel.latex\
+		--metadata-file=variables.yaml\
 		--filter pandoc-crossref\
 		--filter pandoc-include\
 		--listings\
 		--citeproc\
-		--pdf-engine-opt=-shell-escape\
-		--metadata-file=variables.yaml
+		--pdf-engine-opt=-shell-escape
 endef
