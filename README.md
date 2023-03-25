@@ -28,6 +28,20 @@ The title page section has been overwritten in the Eisvogel template with a pand
 
 https://github.com/Wandmalfarbe/pandoc-latex-template/issues/260
 
+## Dependencies
+
+### niet
+
+```sh
+pipx install niet
+```
+
+### plantuml
+
+```sh
+sudo apt install plantuml
+```
+
 ## Links
 
 https://pandoc.org/MANUAL.html#pandocs-markdown
