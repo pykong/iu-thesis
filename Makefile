@@ -1,12 +1,14 @@
 # https://learnxinyminutes.com/docs/make/
 SHELL = /usr/bin/bash
 
+VAR_FILE = variables.yaml
+
 # output file name
 DATE = $$(date '+%Y%m%d')
-FNAME = $$(niet first-name variables.yaml)
-LNAME = $$(niet last-name variables.yaml)
-MAT_NUM = $$(niet mat-number variables.yaml)
-COURSE_ID = $$(niet course-id variables.yaml)
+FNAME = $$(niet first-name ${VAR_FILE})
+LNAME = $$(niet last-name ${VAR_FILE})
+MAT_NUM = $$(niet mat-number ${VAR_FILE})
+COURSE_ID = $$(niet course-id ${VAR_FILE})
 OUTPUT_FILE = ${DATE}_${LNAME}_${FNAME}_${MAT_NUM}_${COURSE_ID}.pdf
 
 build:
