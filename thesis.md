@@ -18,7 +18,6 @@ titlepage: false
 # additional LaTeX packages
 header-includes:
   - \usepackage{datetime}
-  - \usepackage{setspace}
   # - \inputencoding{latin2}
 
 # general document config
