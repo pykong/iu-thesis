@@ -73,7 +73,8 @@ def make_filetree(p: Path) -> str:
     Returns:
         str: The tree cased in a markdown block.
     """
-    cmd = f"tree -n -I __pycache__ --sort=name --noreport --dirsfirst {p}"
+    ignr_pats = "|".join(PATTERNS_FILE.read_text().splitlines())
+    cmd = f"tree -n -I '{ignr_pats}' --sort=name --noreport --dirsfirst {p}"
     output = check_output(cmd, shell=True)
     output = output.decode()
     output = output.split("\n")[1:-1]  # eliminate 1st and last line
