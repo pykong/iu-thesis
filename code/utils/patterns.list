@@ -14,5 +14,4 @@ source/
 *.env
 __init__.py
 output/
-
 pyproject.toml
