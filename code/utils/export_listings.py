@@ -1,12 +1,17 @@
 """
-Export the contents of a files in a dir to markdown code blocks.
-This can be used for example as a helper for written assignments when the
-contents need to be included as a text export.
+Walks a directory and provides an import statement for each file.
+Import statements will be encapsulated in code block as demanded by
+pandoc-include (https://github.com/DCsunset/pandoc-include).
 
-A tree of the directory is also prepended.
+Usage:
+    python export_listings.py list_this_dir/ output_file.md
+
+    A tree of the directory is also prepended if -tree is passed:
+    python export_listings.py list_this_dir/ output_file.md --tree
 
 Files and dirs can also be ignore via gitignore style patterns provided in
-a patterns.list file. (Note that pattern might not affect the tree creation.)
+a patterns.list file. (Note that pattern might not be the same of export and
+tree creation.)
 """
 
 import re
@@ -125,10 +130,6 @@ def main(proj_dir: Path, output_file: Path, export_tree: bool) -> None:
 
     comp = "\n\n".join(blocks) + "\n"
     output_file.write_text(comp)
-
-    # tree = make_filetree(proj_dir)
-    # comp = "\n\n".join((tree, *code_blocks.values())) + "\n"
-    # output_file.write_text(comp)
 
 
 if __name__ == "__main__":
