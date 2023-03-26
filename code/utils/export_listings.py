@@ -49,6 +49,14 @@ def make_markdown_block(lst_id: str, caption: str, ext: str, body: str) -> str:
 
 
 def make_code_import(name: Path) -> str:
+    """Create code block to be used with pandoc-include.
+
+    Args:
+        name (Path): The path of the file to be imported.
+
+    Returns:
+        str: The created code block.
+    """
     clean_name = re.sub("[^a-zA-Z0-9_]", "_", str(name))
     code_ref = f"!include ../{name}"
     return make_markdown_block(
@@ -57,6 +65,14 @@ def make_code_import(name: Path) -> str:
 
 
 def make_filetree(p: Path) -> str:
+    """Create a file tree in a markdown block.
+
+    Args:
+        p (Path): The directory to be mapped.
+
+    Returns:
+        str: The tree cased in a markdown block.
+    """
     cmd = f"tree -n -I __pycache__ --sort=name --noreport --dirsfirst {p}"
     output = check_output(cmd, shell=True)
     output = output.decode()
@@ -68,6 +84,17 @@ def make_filetree(p: Path) -> str:
 
 
 def main(proj_dir: Path, output_file: Path) -> None:
+    """The main method, binding together all subfunctions.
+
+    Args:
+        proj_dir (Path): The directory to be exported.
+        output_file (Path): The export destination.
+
+    Raises:
+        Exception: Throws if proj_dir does not exist.
+        Exception: Throws id proj_dir is not a directory.
+    """
+
     # some basic checks
     if not proj_dir.exists():
         raise Exception(f"{proj_dir} does not exist.")
