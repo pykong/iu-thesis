@@ -17,7 +17,7 @@ from typing import Final
 
 from pathspec import PathSpec
 
-PATTERNS_FILE: Final[str] = "code/utils/patterns.list"  # TODO: Do not hardcode
+PATTERNS_FILE: Final[Path] = Path(sys.argv[0]).parent / "patterns.list"
 with open(PATTERNS_FILE, "r") as fh:
     SPEC: Final[PathSpec] = PathSpec.from_lines("gitwildmatch", fh)
 
