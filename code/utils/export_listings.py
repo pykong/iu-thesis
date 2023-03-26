@@ -93,7 +93,7 @@ def main(proj_dir: Path, output_file: Path) -> None:
     Raises:
         Exception: Throws if proj_dir does not exist.
         Exception: Throws if proj_dir is not a directory.
-        Exception: If file can not be read.
+        Exception: Throws if file can not be read.
     """
 
     # some basic checks
