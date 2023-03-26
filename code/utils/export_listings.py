@@ -22,29 +22,49 @@ with open(PATTERNS_FILE, "r") as fh:
     SPEC: Final[PathSpec] = PathSpec.from_lines("gitwildmatch", fh)
 
 
-def make_markdown(suffix: str, text: str) -> str:
-    return f"```{suffix}\n{text}\n```"
+def make_markdown_block(lst_id: str, caption: str, ext: str, body: str) -> str:
+    """Creates a markdown code block.
+
+    Args:
+        lst_id (str): Listing id.
+        caption (str): Caption.
+        ext (str): File extension
+        body (str): Body of the block.
+
+    Returns:
+        str: The create code block.
+    """
+    block_info = []
+    if lst_id:
+        block_info.append("#lst:" + lst_id)
+    if caption:
+        block_info.append(f'caption="{caption}"')
+    if ext:
+        block_info.append(ext)
+
+    if block_info:
+        block_info = "{" + " ".join(block_info) + "}"
+
+    return f"```{block_info}\n{body}\n```"
 
 
-def make_block_info(name: Path) -> str:
+def make_code_import(name: Path) -> str:
     clean_name = re.sub("[^a-zA-Z0-9_]", "_", str(name))
-    return f'{{#lst:{clean_name} caption="{name}" {name.suffix}}}'
+    code_ref = f"!include ../{name}"
+    return make_markdown_block(
+        lst_id=clean_name, caption=name, ext=name.suffix, body=code_ref
+    )
 
 
 def make_filetree(p: Path) -> str:
     cmd = f"tree -n -I __pycache__ --sort=name --noreport --dirsfirst {p}"
-    # print(cmd)
     output = check_output(cmd, shell=True)
     output = output.decode()
-    output = output.split("\n")[1:]  # eliminate 1st line
+    output = output.split("\n")[1:-1]  # eliminate 1st and last line
     output = "\n".join(output)
-    return make_markdown("", output)
-
-
-def extract_text(p: Path) -> str:
-    suffix = p.suffix.split(".")[-1]
-    text = p.read_text()
-    return make_markdown(suffix, text)
+    return make_markdown_block(
+        lst_id="code_dir_tree", caption="Code Dir Tree", ext=".txt", body=output
+    )
 
 
 def main(proj_dir: Path, output_file: Path) -> None:
@@ -62,17 +82,14 @@ def main(proj_dir: Path, output_file: Path) -> None:
     code_blocks = {}
     for p in files_:
         name = p.relative_to(proj_dir.parent)
-        code_ref = f"!include ../{name}"
-        block_info = make_block_info(name)
         try:
-            code_blocks[name] = f"```{block_info}\n{code_ref}\n```"
+            code_blocks[name] = make_code_import(name)
         except Exception:
             print(f"Can not read: {name}")
 
     # compile to single file
-    # tree = make_filetree(proj_dir)
-    tree = ""  # Dirty way to deactivate tree creation
-    comp = "\n\n".join((tree, *code_blocks.values()))
+    tree = make_filetree(proj_dir)
+    comp = "\n\n".join((tree, *code_blocks.values())) + "\n"
     output_file.write_text(comp)
 
 
