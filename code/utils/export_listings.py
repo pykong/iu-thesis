@@ -92,7 +92,8 @@ def main(proj_dir: Path, output_file: Path) -> None:
 
     Raises:
         Exception: Throws if proj_dir does not exist.
-        Exception: Throws id proj_dir is not a directory.
+        Exception: Throws if proj_dir is not a directory.
+        Exception: If file can not be read.
     """
 
     # some basic checks
@@ -105,7 +106,7 @@ def main(proj_dir: Path, output_file: Path) -> None:
     files_ = [p for p in proj_dir.rglob("*") if p.is_file() and not SPEC.match_file(p)]
     files_ = sorted(files_)
 
-    # creat code blocks fron list of files_
+    # creat code blocks from list of files_
     code_blocks = {}
     for p in files_:
         name = p.relative_to(proj_dir.parent)
