@@ -34,7 +34,10 @@ compile_complete_document:
 
 define export_listings
 	@echo "Exporting listings"
-	@code/.venv/bin/python code/utils/export_listings.py code output/listings.md
+	@code/.venv/bin/python\
+		code/utils/export_listings.py\
+		code output/listings.md\
+		--tree
 endef
 
 define run_code

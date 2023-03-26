@@ -7,8 +7,8 @@ A tree of the directory is also prepended.
 
 Files and dirs can also be ignore via gitignore style patterns provided in
 a patterns.list file. (Note that pattern might not affect the tree creation.)
-
 """
+
 import re
 import sys
 from pathlib import Path
@@ -16,6 +16,7 @@ from subprocess import check_output
 from typing import Final
 
 from pathspec import PathSpec
+
 
 PATTERNS_FILE: Final[Path] = Path(sys.argv[0]).parent / "patterns.list"
 with open(PATTERNS_FILE, "r") as fh:
@@ -84,12 +85,13 @@ def make_filetree(p: Path) -> str:
     )
 
 
-def main(proj_dir: Path, output_file: Path) -> None:
+def main(proj_dir: Path, output_file: Path, export_tree: bool) -> None:
     """The main method, binding together all subfunctions.
 
     Args:
         proj_dir (Path): The directory to be exported.
         output_file (Path): The export destination.
+        export_tree (bool): Export tree or not.
 
     Raises:
         Exception: Throws if proj_dir does not exist.
@@ -117,12 +119,20 @@ def main(proj_dir: Path, output_file: Path) -> None:
             print(f"Can not read: {name}")
 
     # compile to single file
-    tree = make_filetree(proj_dir)
-    comp = "\n\n".join((tree, *code_blocks.values())) + "\n"
+    blocks = [*code_blocks.values()]
+    if export_tree:
+        blocks[:0] = {make_filetree(proj_dir)}
+
+    comp = "\n\n".join(blocks) + "\n"
     output_file.write_text(comp)
+
+    # tree = make_filetree(proj_dir)
+    # comp = "\n\n".join((tree, *code_blocks.values())) + "\n"
+    # output_file.write_text(comp)
 
 
 if __name__ == "__main__":
     proj_dir = Path(sys.argv[1])
     output_file = Path(sys.argv[2] if len(sys.argv) > 2 else "listings.md")
-    main(proj_dir, output_file)
+    export_tree: bool = True if "--tree" in sys.argv else False
+    main(proj_dir, output_file, export_tree)
