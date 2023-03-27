@@ -4,9 +4,9 @@ titlepage: false
 
 # additional LaTeX packages
 header-includes:
-  - \usepackage{datetime}
-  - \usepackage[11pt]{moresize}
-  # - \inputencoding{latin2}
+    - \usepackage{datetime}
+    - \usepackage[11pt]{moresize}
+    # - \inputencoding{latin2}
 
 # general document config
 lang: "en"
@@ -30,12 +30,18 @@ csl: bib/apa.csl
 
 ## Bernoulli distribution
 
-> A vote with the outcomes **_for_** or **_against_** follows a Bernoulli distribution where $P(vote=for) = 0.03$. Represent the proportion of **_for_** and **_against_** in this single Bernoulli trial using graphics and using percentages. Can an expectation be calculated? Justify your answer.
+> A vote with the outcomes **_for_** or **_against_** follows a Bernoulli
+> distribution where $P(vote=for) = 0.03$. Represent the proportion of **_for_**
+> and **_against_** in this single Bernoulli trial using graphics and using
+> percentages. Can an expectation be calculated? Justify your answer.
 
-Following Hogg, we can understand the phenomenon at hand as a Bernoulli experiment; "[...] the outcome of which can
-be classified in but one of two mutually exclusive and exhaustive ways [...]" [@hoggIntroductionMathematicalStatistics p.155].
+Following Hogg, we can understand the phenomenon at hand as a Bernoulli
+experiment; "[...] the outcome of which can be classified in but one of two
+mutually exclusive and exhaustive ways [...]"
+[@hoggIntroductionMathematicalStatistics p.155].
 
-Let $X$ be a random variable associated with a single vote by defining it as follows [@hoggIntroductionMathematicalStatistics, p.155]:
+Let $X$ be a random variable associated with a single vote by defining it as
+follows [@hoggIntroductionMathematicalStatistics, p.155]:
 
 $$X \sim Bern(p=for) = Bern(p = 0.03)$${#eq:Bernoulli}
 
@@ -43,16 +49,22 @@ $$X \sim Bern(p=for) = Bern(p = 0.03)$${#eq:Bernoulli}
 
 This gives us the following proportions:
 
-$$
+<!-- Multi-line $$ $$ break prettier, always extending $$ to the end of file -->
+<!-- $$
 \begin{aligned}
 P(vote=for) &= 0.03\\
 P(vote=against) &= 1 - p = 0.97
 \end{aligned}
-$${#eq:multi_line}
+$${#eq:multi_line} -->
 
-These proportions can be best visualized with a column chart^[A “[lollipop chart](https://datavizproject.com/data-type/lollipop-chart/)” might be even more suitable to visualize a discrete distribution. However, Matplotlib does not offer an appropriate plot type for building those.] as generated via [@lst:1_1_Bernoulli_py]:
+These proportions can be best visualized with a column chart^[A
+“[lollipop chart](https://datavizproject.com/data-type/lollipop-chart/)” might
+be even more suitable to visualize a discrete distribution. However, Matplotlib
+does not offer an appropriate plot type for building those.] as generated via
+[@lst:1_1_Bernoulli_py]:
 
-![Bernoulli distribution](output/img/1_1_Bernoulli.pdf){#fig:bernoulli width=75%}
+![Bernoulli distribution](output/img/1_1_Bernoulli.pdf){#fig:bernoulli
+width=75%}
 
 \newpage
 
@@ -72,7 +84,9 @@ Heyho, referencing [@lst:code1].
 
 ## Constant of integration
 
-Throughout this work, the constants of integration have been omitted for simplification. In a more rigorous mathematical sense, they should be included such that:
+Throughout this work, the constants of integration have been omitted for
+simplification. In a more rigorous mathematical sense, they should be included
+such that:
 
 $$\int f(x) \; dx = F(x) + c$${#eq:int_const}
 
@@ -80,7 +94,12 @@ $$\int f(x) \; dx = F(x) + c$${#eq:int_const}
 
 ## Multi-line equations
 
-Labelling, aligning and referencing multi-line equations, difficult using pandoc and pandoc-crossref (https://github.com/lierdakil/pandoc-crossref/issues/131). The following example shows how it can be done nonetheless. This does not require any hacks, workarounds or any additional logic.
+Labelling, aligning and referencing multi-line equations, difficult using pandoc
+and pandoc-crossref (https://github.com/lierdakil/pandoc-crossref/issues/131).
+The following example shows how it can be done nonetheless. This does not
+require any hacks, workarounds or any additional logic.
+
+<!-- prettier-ignore-start -->
 
 \begin{align}
 1 + 0 & = 1, \label{eq1} \\
@@ -100,12 +119,14 @@ g(x) &= a x \label{eq:two} \\
 e           &= x * mc ** 2 \label{eq:emcsquared}
 \end{align}
 
-Holla [@eq:ggg]
-Hey, equations [@eq:one], [@eq:two] and [@eq:emcsquared]
+<!-- prettier-ignore-end -->
+
+Holla [@eq:ggg] Hey, equations [@eq:one], [@eq:two] and [@eq:emcsquared]
 
 \newpage
 
-![PlantUML Test A](output/plantuml/PlantUMLTest_A.svg){#fig:plantuml_test_a width=30%}
+![PlantUML Test A](output/plantuml/PlantUMLTest_A.svg){#fig:plantuml_test_a
+width=30%}
 
 Test refering to "PlantUML Test A" [@fig:plantuml_test_a]
 
@@ -118,6 +139,3 @@ Test refering to "PlantUML Test A" [@fig:plantuml_test_a]
 # Listings {-}
 
 !include output/listings.md
-
-
-$$
