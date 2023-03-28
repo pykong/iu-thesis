@@ -24,7 +24,9 @@ https://github.com/citation-style-language/styles
 
 ## Cover Page Hack
 
-The title page section has been overwritten in the Eisvogel template with a pandoc template partial, in order to provide a custom cover that can still expand pandoc's variables. See issue on the Eisvogel GitHub for further details:
+The title page section has been overwritten in the Eisvogel template with a
+pandoc template partial, in order to provide a custom cover that can still
+expand pandoc's variables. See issue on the Eisvogel GitHub for further details:
 
 https://github.com/Wandmalfarbe/pandoc-latex-template/issues/260
 
@@ -49,6 +51,16 @@ https://github.com/DCsunset/pandoc-include
 ```sh
 pipx install pandoc-include
 ```
+
+## Notes
+
+### On prettier
+
+This project is using prettier for formatting markdown files. Unfortunately,
+prettier screws up when encountering a multiline math block using double dollar
+signs. This annoyingly led to prettier to insert another at the end of the file.
+
+https://github.com/executablebooks/mdformat#why-not-use-prettier-instead
 
 ## Links
 
