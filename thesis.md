@@ -142,8 +142,6 @@ Test refering to "PlantUML Test A" [@fig:plantuml_test_a]
 
 ## Tables
 
-<!-- prettier-ignore-start -->
-
 ```{#tbl:dummyTable .table}
 ---
 caption: '*Awesome* **Dummy** Table'
@@ -153,8 +151,6 @@ markdown: True
 include: ./data/dummy.csv
 ---
 ```
-
-<!-- prettier-ignore-end -->
 
 We can reference our imported table: [@tbl:dummyTable]
 
