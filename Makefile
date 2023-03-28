@@ -56,6 +56,7 @@ define compile_thesis
 		-s -V papersize:a4\
 		--template=template/eisvogel.latex\
 		--metadata-file=variables.yaml\
+		--filter pantable\
 		--filter pandoc-crossref\
 		--filter pandoc-include\
 		--listings\

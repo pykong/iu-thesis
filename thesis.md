@@ -140,6 +140,26 @@ Test refering to "PlantUML Test A" [@fig:plantuml_test_a]
 
 \newpage
 
+## Tables
+
+<!-- prettier-ignore-start -->
+
+```{#tbl:dummyTable .table}
+---
+caption: '*Awesome* **Dummy** Table'
+alignment: RC
+table-width: 2/3
+markdown: True
+include: ./data/dummy.csv
+---
+```
+
+<!-- prettier-ignore-end -->
+
+We can reference our imported table: [@tbl:dummyTable]
+
+\newpage
+
 <div id="refs">
 # References {-}
 </div>
@@ -147,3 +167,18 @@ Test refering to "PlantUML Test A" [@fig:plantuml_test_a]
 # Listings {-}
 
 !include output/listings.md
+
+````
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+````
