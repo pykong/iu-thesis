@@ -119,9 +119,17 @@ g(x) &= a x \label{eq:two} \\
 e           &= x * mc ** 2 \label{eq:emcsquared}
 \end{align}
 
+\begin{align}
+  f(x) &= x^2\\
+  g(x) &= \frac{1}{x} \label{eq:frac1}\\
+  F(x) &= \int^a_b \frac{1}{3}x^3 \label{eq:frac2}
+\end{align}
+
 <!-- prettier-ignore-end -->
 
 Holla [@eq:ggg] Hey, equations [@eq:one], [@eq:two] and [@eq:emcsquared]
+
+Full math supported [@eq:frac1], [@eq:frac2].
 
 \newpage
 
