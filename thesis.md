@@ -102,21 +102,21 @@ require any hacks, workarounds or any additional logic.
 <!-- prettier-ignore-start -->
 
 \begin{align}
-1 + 0 & = 1, \label{eq1} \\
-1 + 1 & = 2. \label{eq2}
+  1 + 0 & = 1, \label{eq1} \\
+  1 + 1 & = 2. \label{eq2}
 \end{align}
 
 \begin{align*}
-1 + 2 = 3 \\
-3 + 2 = 5
+  1 + 2 = 3 \\
+  3 + 2 = 5
 \end{align*}
 
 $$ a = b + c $$ {#eq:ggg}
 
 \begin{align}
-f(x) &= x + a \label{eq:one} \\
-g(x) &= a x \label{eq:two} \\
-e           &= x * mc ** 2 \label{eq:emcsquared}
+  f(x) &= x + a \label{eq:one} \\
+  g(x) &= a x \label{eq:two} \\
+  e           &= x * mc ** 2 \label{eq:emcsquared}
 \end{align}
 
 \begin{align}
