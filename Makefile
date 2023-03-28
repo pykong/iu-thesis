@@ -37,6 +37,7 @@ tidy_bib:
 
 update_bib:
 	$(update_bib)
+	$(tidy_bib)
 
 
 define export_listings
