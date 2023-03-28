@@ -52,6 +52,14 @@ https://github.com/DCsunset/pandoc-include
 pipx install pandoc-include
 ```
 
+### pantable
+
+https://github.com/ickc/pantable
+
+```sh
+pipx install pantable
+```
+
 ## Notes
 
 ### On prettier
