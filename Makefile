@@ -31,6 +31,9 @@ compile_thesis:
 compile_complete_document:
 	$(compile_complete_document)
 
+tidy_bib:
+	$(tidy_bib)
+
 
 define export_listings
 	@echo "Exporting listings"
@@ -61,4 +64,20 @@ define compile_thesis
 		--filter pandoc-include\
 		--listings\
 		--citeproc
+endef
+
+define tidy_bib
+	@bibtex-tidy\
+		bib/refs.bib\
+		--curly\
+		--numeric\
+		--tab\
+		--align=13\
+		--sort=year\
+		--duplicates=key,doi,citation\
+		--merge=combine\
+		--no-escape\
+		--sort-fields\
+		--trailing-commas\
+		--wrap=80
 endef

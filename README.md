@@ -60,6 +60,15 @@ https://github.com/ickc/pantable
 pipx install pantable
 ```
 
+### bibtex-tidy
+
+https://www.npmjs.com/package/bibtex-tidy
+https://flamingtempura.github.io/bibtex-tidy
+
+```sh
+npm install -g bibtex-tidy
+```
+
 ## Notes
 
 ### On prettier
