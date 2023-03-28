@@ -77,6 +77,13 @@ https://github.com/bibcure/bibcure
 pipx install bibcure
 ```
 
+## Visual Studio Code Plugins
+
+-   Markdown All in One (yzhang.markdown-all-in-one)
+-   Markdown+Math (goessner.mdmath)
+-   markdownlint (DavidAnson.vscode-markdownlint)
+-   Pandoc Citer (notZaki.pandocciter)
+
 ## Notes
 
 ### On prettier
