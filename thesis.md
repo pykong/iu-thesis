@@ -163,18 +163,3 @@ We can reference our imported table: [@tbl:dummyTable]
 # Listings {-}
 
 !include output/listings.md
-
-````
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-````

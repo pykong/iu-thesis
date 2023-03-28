@@ -37,7 +37,7 @@ define export_listings
 	@code/.venv/bin/python\
 		code/utils/export_listings.py\
 		code output/listings.md\
-		--tree
+		# --tree
 endef
 
 define run_code
