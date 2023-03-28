@@ -69,6 +69,14 @@ https://flamingtempura.github.io/bibtex-tidy
 npm install -g bibtex-tidy
 ```
 
+### bibcure
+
+https://github.com/bibcure/bibcure
+
+```sh
+pipx install bibcure
+```
+
 ## Notes
 
 ### On prettier

@@ -2,6 +2,7 @@
 SHELL = /usr/bin/bash
 
 VAR_FILE = variables.yaml
+BIB_FILE = bib/refs.bib
 
 # output file name
 DATE = $$(date '+%Y%m%d')
@@ -33,6 +34,9 @@ compile_complete_document:
 
 tidy_bib:
 	$(tidy_bib)
+
+update_bib:
+	$(update_bib)
 
 
 define export_listings
@@ -68,7 +72,7 @@ endef
 
 define tidy_bib
 	@bibtex-tidy\
-		bib/refs.bib\
+		${BIB_FILE}\
 		--curly\
 		--numeric\
 		--tab\
@@ -80,4 +84,8 @@ define tidy_bib
 		--sort-fields\
 		--trailing-commas\
 		--wrap=80
+endef
+
+define update_bib
+	@bibcure -i ${BIB_FILE} -o ${BIB_FILE}
 endef
