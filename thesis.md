@@ -1,6 +1,7 @@
 ---
 # title page
 titlepage: false
+author: "{{first-name}} {{last-name}}"
 
 # additional LaTeX packages
 header-includes:
