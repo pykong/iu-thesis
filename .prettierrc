@@ -1,5 +1,6 @@
 {
     "tabWidth": 4,
     "useTabs": false,
-    "proseWrap": "always"
+    "proseWrap": "always",
+    "overrides": [{ "files": ["*.md"], "options": { "tabWidth": 2 } }]
 }

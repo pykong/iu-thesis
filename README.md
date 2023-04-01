@@ -79,14 +79,14 @@ pipx install bibcure
 
 ## Visual Studio Code Plugins
 
--   Markdown All in One (yzhang.markdown-all-in-one)
--   Markdown+Math (goessner.mdmath)
--   markdownlint (DavidAnson.vscode-markdownlint)
--   Pandoc Citer (notZaki.pandocciter)
--   LanguageTool for Visual Studio Code (adamvoss.vscode-languagetool)
-    -   English Support for LanguageTool (adamvoss.vscode-languagetool-en)
--   proselint (PatrykPeszko.vscode-proselint)
-    -   pipx install proselint
+- Markdown All in One (yzhang.markdown-all-in-one)
+- Markdown+Math (goessner.mdmath)
+- markdownlint (DavidAnson.vscode-markdownlint)
+- Pandoc Citer (notZaki.pandocciter)
+- LanguageTool for Visual Studio Code (adamvoss.vscode-languagetool)
+  - English Support for LanguageTool (adamvoss.vscode-languagetool-en)
+- proselint (PatrykPeszko.vscode-proselint)
+  - pipx install proselint
 
 ## Notes
 
