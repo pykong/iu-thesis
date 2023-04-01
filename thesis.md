@@ -24,6 +24,8 @@ caption-justification: centering
 link-citations: true
 bibliography: [bib/refs.bib]
 csl: bib/apa.csl
+
+mustache: variables.yaml
 ---
 
 # Basic Probabilities and Visualizations (1)
@@ -137,6 +139,15 @@ Full math supported [@eq:frac1], [@eq:frac2].
 width=30%}
 
 Test refering to "PlantUML Test A" [@fig:plantuml_test_a]
+
+\newpage
+
+## Example: pandoc-mustache
+
+We can replace expand variables in our document (not just the template) using
+pandoc-mustache.
+
+Example - my matriculation number is: {{mat-number}}
 
 \newpage
 

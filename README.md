@@ -52,6 +52,14 @@ sudo apt install plantuml
 pipx install pandoc-include
 ```
 
+### pandoc-mustache
+
+<https://github.com/michaelstepner/pandoc-mustache>
+
+```sh
+pipx install pandoc-mustache
+```
+
 ### pantable
 
 <https://github.com/ickc/pantable>
