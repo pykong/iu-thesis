@@ -83,6 +83,8 @@ pipx install bibcure
 -   Markdown+Math (goessner.mdmath)
 -   markdownlint (DavidAnson.vscode-markdownlint)
 -   Pandoc Citer (notZaki.pandocciter)
+-   LanguageTool for Visual Studio Code (adamvoss.vscode-languagetool)
+    -   English Support for LanguageTool (adamvoss.vscode-languagetool-en)
 
 ## Notes
 
