@@ -2,5 +2,7 @@
     "tabWidth": 4,
     "useTabs": false,
     "proseWrap": "always",
-    "overrides": [{ "files": ["*.md"], "options": { "tabWidth": 2 } }]
+    "overrides": [
+        { "files": ["*.md", "*.yaml", "*.yml"], "options": { "tabWidth": 2 } }
+    ]
 }
