@@ -1,13 +1,15 @@
 ---
 # title page
 titlepage: false
+
+# variables
+mustache: variables.yaml
 author: "{{first-name}} {{last-name}}"
 
 # additional LaTeX packages
 header-includes:
   - \usepackage{datetime}
   - \usepackage[11pt]{moresize}
-  # - \inputencoding{latin2}
 
 # general document config
 lang: "en"
@@ -20,13 +22,12 @@ codeBlockCaptions: true
 linkReferences: true
 float-placement-figure: H
 caption-justification: centering
+colorlinks: true
 
 # citation config
 link-citations: true
 bibliography: [bib/refs.bib]
 csl: bib/apa.csl
-
-mustache: variables.yaml
 ---
 
 # Basic Probabilities and Visualizations (1)
