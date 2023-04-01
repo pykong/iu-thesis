@@ -68,6 +68,7 @@ define compile_thesis
 		--filter pandoc-crossref\
 		--filter pandoc-include\
 		--filter pandoc-mustache\
+		--filter pandoc-latex-environment\
 		--listings\
 		--citeproc
 endef

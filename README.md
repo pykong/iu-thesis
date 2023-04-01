@@ -68,6 +68,14 @@ pipx install pandoc-mustache
 pipx install pantable
 ```
 
+### pandoc-latex-environment
+
+<https://github.com/chdemko/pandoc-latex-environment>
+
+```sh
+pipx install pandoc-latex-environment
+```
+
 ### bibtex-tidy
 
 <https://www.npmjs.com/package/bibtex-tidy>
