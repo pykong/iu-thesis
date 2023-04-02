@@ -39,70 +39,9 @@ bibliography: [bib/refs.bib]
 csl: bib/apa.csl
 ---
 
-# Example: Equations
+!include sections/equations.md
 
-## Constant of integration
-
-Throughout this work, the constants of integration have been omitted for
-simplification. In a more rigorous mathematical sense, they should be included
-such that:
-
-$$\int f(x) \; dx = F(x) + c$${#eq:int_const}
-
-\newpage
-
-## Multi-line equations
-
-Labelling, aligning and referencing multi-line equations, difficult using pandoc
-and pandoc-crossref (<https://github.com/lierdakil/pandoc-crossref/issues/131>).
-The following example shows how it can be done nonetheless. This does not
-require any hacks, workarounds or any additional logic.
-
-<!-- prettier-ignore-start -->
-
-\begin{align}
-  1 + 0 & = 1, \label{eq1} \\
-  1 + 1 & = 2. \label{eq2}
-\end{align}
-
-\begin{align*}
-  1 + 2 = 3 \\
-  3 + 2 = 5
-\end{align*}
-
-$$ a = b + c $$ {#eq:ggg}
-
-\begin{align}
-  f(x) &= x + a \label{eq:one} \\
-  g(x) &= a x \label{eq:two} \\
-  e           &= x * mc ** 2 \label{eq:emcsquared}
-\end{align}
-
-\begin{align}
-  f(x) &= x^2\\
-  g(x) &= \frac{1}{x} \label{eq:frac1}\\
-  F(x) &= \int^a_b \frac{1}{3}x^3 \label{eq:frac2}
-\end{align}
-
-<!-- prettier-ignore-end -->
-
-Holla [@eq:ggg] Hey, equations [@eq:one], [@eq:two] and [@eq:emcsquared]
-
-Full math supported [@eq:frac1], [@eq:frac2].
-
-\newpage
-
-# Example: Includes
-
-Include entire python file and reference, using pandoc-include.
-
-```{#lst:code1 caption="Listing caption"}
-!include ./code/example.py
-```
-
-Heyho, referencing [@lst:code1].
-
-\newpage
+!include sections/includes.md
 
 # Example: Diagrams
 
@@ -113,27 +52,9 @@ Test refering to "PlantUML Test A" [@fig:plantuml_test_a]
 
 \newpage
 
-# Example: Variables
+!include sections/variables.md
 
-We can replace expand variables in our document (not just the template) using
-pandoc-mustache.
-
-Example - my matriculation number is: {{mat-number}}
-
-We can even expand nested variables: {{complex-variable.prop1}}
-
-\newpage
-
-# Example: Comments
-
-<!-- I am a comment. I should not appear in the rendered document. -->
-
-Ipsum labore Lorem sunt commodo est ullamco excepteur exercitation occaecat sint
-consectetur nisi nisi. Dolore tempor ea sit sint officia ipsum consequat enim.
-Consequat veniam exercitation deserunt officia pariatur commodo aliqua
-consequat.
-
-\newpage
+!include sections/comments.md
 
 # Example: Boxes
 
@@ -230,21 +151,7 @@ _Nam aliquet libero quis lectus elementum fermentum._ :::
 
 \newpage
 
-# Example: Tables
-
-```{#tbl:dummyTable .table}
----
-caption: '*Awesome* **Dummy** Table'
-alignment: RC
-table-width: 2/3
-markdown: True
-include: ./data/dummy.csv
----
-```
-
-We can reference our imported table: [@tbl:dummyTable]
-
-\newpage
+!include sections/tables.md
 
 # Notes {-}
 
