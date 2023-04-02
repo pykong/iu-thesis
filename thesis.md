@@ -52,13 +52,12 @@ Test refering to "PlantUML Test A" [@fig:plantuml_test_a]
 
 \newpage
 
+<!-- prettier-ignore-start -->
 !include sections/variables.md
-
 !include sections/comments.md
-
 !include sections/boxes.md
-
 !include sections/tables.md
+<!-- prettier-ignore-end -->
 
 # Notes {-}
 
