@@ -32,5 +32,6 @@
         "MD033": false
     },
     "PandocCiter.RootFile": "${workspaceFolder}/thesis.md",
-    "PandocCiter.DefaultBib": "${workspaceFolder}/bib/refs.bib"
+    "PandocCiter.DefaultBib": "${workspaceFolder}/bib/refs.bib",
+    "PandocCiter.ViewType": "browser"
 }
