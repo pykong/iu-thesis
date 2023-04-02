@@ -16,51 +16,71 @@ For a list of all available boxes and options visit the
 ::: note Lorem ipsum dolor ... :::
 ```
 
-::: note Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet
-libero quis lectus elementum fermentum.
+::: note
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet libero quis
+lectus elementum fermentum.
 
 Fusce aliquet augue sapien, non efficitur mi ornare sed. Morbi at dictum felis.
-Pellentesque tortor lacus, semper et neque vitae, egestas commodo nisl. :::
+Pellentesque tortor lacus, semper et neque vitae, egestas commodo nisl.
+
+:::
 
 ```markdown
 ::: tip Lorem ipsum dolor ... :::
 ```
 
-::: tip Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet
-libero quis lectus elementum fermentum.
+::: tip
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet libero quis
+lectus elementum fermentum.
 
 Fusce aliquet augue sapien, non efficitur mi ornare sed. Morbi at dictum felis.
-Pellentesque tortor lacus, semper et neque vitae, egestas commodo nisl. :::
+Pellentesque tortor lacus, semper et neque vitae, egestas commodo nisl.
+
+:::
 
 ```markdown
 ::: warning Lorem ipsum dolor ... :::
 ```
 
-::: warning Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet
-libero quis lectus elementum fermentum.
+::: warning
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet libero quis
+lectus elementum fermentum.
 
 Fusce aliquet augue sapien, non efficitur mi ornare sed. Morbi at dictum felis.
-Pellentesque tortor lacus, semper et neque vitae, egestas commodo nisl. :::
+Pellentesque tortor lacus, semper et neque vitae, egestas commodo nisl.
+
+:::
 
 ```markdown
 ::: caution Lorem ipsum dolor ... :::
 ```
 
-::: caution Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet
-libero quis lectus elementum fermentum.
+::: caution
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet libero quis
+lectus elementum fermentum.
 
 Fusce aliquet augue sapien, non efficitur mi ornare sed. Morbi at dictum felis.
-Pellentesque tortor lacus, semper et neque vitae, egestas commodo nisl. :::
+Pellentesque tortor lacus, semper et neque vitae, egestas commodo nisl.
+
+:::
 
 ```markdown
 ::: important Lorem ipsum dolor ... :::
 ```
 
-::: important Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-aliquet libero quis lectus elementum fermentum.
+::: important
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet libero quis
+lectus elementum fermentum.
 
 Fusce aliquet augue sapien, non efficitur mi ornare sed. Morbi at dictum felis.
-Pellentesque tortor lacus, semper et neque vitae, egestas commodo nisl. :::
+Pellentesque tortor lacus, semper et neque vitae, egestas commodo nisl.
+
+:::
 
 One can also use raw HTML `div` tags to create the custom environments.
 
@@ -77,7 +97,9 @@ quis lectus elementum fermentum.
 
 Markdown formatting inside the environments is supported.
 
-::: important **Lorem ipsum dolor** sit amet, `consectetur adipiscing` elit.
+::: important
+
+**Lorem ipsum dolor** sit amet, `consectetur adipiscing` elit.
 
 ```js
 if (args.length < 2) {
@@ -85,7 +107,9 @@ if (args.length < 2) {
 }
 ```
 
-_Nam aliquet libero quis lectus elementum fermentum._ :::
+_Nam aliquet libero quis lectus elementum fermentum._
+
+:::
 
 [`pandoc-latex-environments`]:
   https://github.com/chdemko/pandoc-latex-environment/
