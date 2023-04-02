@@ -57,11 +57,9 @@ csl: bib/apa.csl
 
 !include sections/tables.md
 
+!include sections/notes.md
+
 <!-- sections-end -->
-
-# Notes {-}
-
-\newpage
 
 <div id="refs">
 # References {-}
