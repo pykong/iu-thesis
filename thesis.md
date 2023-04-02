@@ -57,7 +57,6 @@ csl: bib/apa.csl
 
 <!-- sections-end -->
 
-
 # Notes {-}
 
 \newpage

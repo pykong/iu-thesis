@@ -99,6 +99,8 @@ pipx install bibcure
 - Markdown+Math (goessner.mdmath)
 - markdownlint (DavidAnson.vscode-markdownlint)
 - Pandoc Citer (notZaki.pandocciter)
+  - cross-ref does not work across file boundaries, when using multiple md
+    files: <https://github.com/notZaki/PandocCiter/issues/37>
 - LanguageTool for Visual Studio Code (adamvoss.vscode-languagetool)
   - English Support for LanguageTool (adamvoss.vscode-languagetool-en)
 - proselint (PatrykPeszko.vscode-proselint)
