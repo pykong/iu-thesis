@@ -82,6 +82,8 @@ Pellentesque tortor lacus, semper et neque vitae, egestas commodo nisl.
 
 :::
 
+## DIV tags
+
 One can also use raw HTML `div` tags to create the custom environments.
 
 ```markdown
@@ -94,6 +96,8 @@ Lorem ipsum dolor ...
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet libero
 quis lectus elementum fermentum.
 </div>
+
+## Inner Markdown
 
 Markdown formatting inside the environments is supported.
 
