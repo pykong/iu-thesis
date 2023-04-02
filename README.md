@@ -30,6 +30,14 @@ expand pandoc's variables. See issue on the Eisvogel GitHub for further details:
 
 <https://github.com/Wandmalfarbe/pandoc-latex-template/issues/260>
 
+## Diagrams
+
+Currently PlantUML diagrams are exported to SVG via a custom make target and
+afterwards included as a figure. In the future
+[pandoc-plot](https://github.com/LaurentRDC/pandoc-plot) might be used for that
+purpose. The diagram code might be even imported via pandoc-include into the
+code block.
+
 ## Dependencies
 
 ### niet
