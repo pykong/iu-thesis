@@ -81,19 +81,7 @@ width=75%}
 
 \newpage
 
-# Code Sample 1
-
-Include entire python file and reference, using pandoc-include.
-
-```{#lst:code1 caption="Listing caption"}
-!include ./code/example.py
-```
-
-Heyho, referencing [@lst:code1].
-
-\newpage
-
-# Notes {-}
+# Equations
 
 ## Constant of integration
 
@@ -146,6 +134,20 @@ Full math supported [@eq:frac1], [@eq:frac2].
 
 \newpage
 
+# Example: Includes
+
+Include entire python file and reference, using pandoc-include.
+
+```{#lst:code1 caption="Listing caption"}
+!include ./code/example.py
+```
+
+Heyho, referencing [@lst:code1].
+
+\newpage
+
+# Example: Diagrams
+
 ![PlantUML Test A](output/plantuml/PlantUMLTest_A.svg){#fig:plantuml_test_a
 width=30%}
 
@@ -153,7 +155,7 @@ Test refering to "PlantUML Test A" [@fig:plantuml_test_a]
 
 \newpage
 
-## Example: pandoc-mustache
+# Example: Variables
 
 We can replace expand variables in our document (not just the template) using
 pandoc-mustache.
@@ -164,7 +166,7 @@ We can even expand nested variables: {{complex-variable.prop1}}
 
 \newpage
 
-## Example: Comments
+# Example: Comments
 
 <!-- I am a comment. I should not appear in the rendered document. -->
 
@@ -175,7 +177,7 @@ consequat.
 
 \newpage
 
-## Boxes
+# Example: Boxes
 
 This example demonstrates the use of the filter [`pandoc-latex-environments`] to
 create custom boxes with the [`awesomebox`] package. _pandoc-latex-environment_
@@ -270,7 +272,7 @@ _Nam aliquet libero quis lectus elementum fermentum._ :::
 
 \newpage
 
-## Tables
+# Example: Tables
 
 ```{#tbl:dummyTable .table}
 ---
@@ -283,6 +285,10 @@ include: ./data/dummy.csv
 ```
 
 We can reference our imported table: [@tbl:dummyTable]
+
+\newpage
+
+# Notes {-}
 
 \newpage
 
