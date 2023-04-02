@@ -39,25 +39,23 @@ bibliography: [bib/refs.bib]
 csl: bib/apa.csl
 ---
 
+<!-- sections-start -->
+
 !include sections/equations.md
+
+!include sections/diagrams.md
 
 !include sections/includes.md
 
-# Example: Diagrams
-
-![PlantUML Test A](output/plantuml/PlantUMLTest_A.svg){#fig:plantuml_test_a
-width=30%}
-
-Test refering to "PlantUML Test A" [@fig:plantuml_test_a]
-
-\newpage
-
-<!-- prettier-ignore-start -->
 !include sections/variables.md
+
 !include sections/comments.md
+
 !include sections/boxes.md
+
 !include sections/tables.md
-<!-- prettier-ignore-end -->
+
+<!-- sections-end -->
 
 # Notes {-}
 
