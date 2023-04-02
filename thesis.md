@@ -39,49 +39,7 @@ bibliography: [bib/refs.bib]
 csl: bib/apa.csl
 ---
 
-# Basic Probabilities and Visualizations (1)
-
-## Bernoulli distribution
-
-> A vote with the outcomes **_for_** or **_against_** follows a Bernoulli
-> distribution where $P(vote=for) = 0.03$. Represent the proportion of **_for_**
-> and **_against_** in this single Bernoulli trial using graphics and using
-> percentages. Can an expectation be calculated? Justify your answer.
-
-Following Hogg, we can understand the phenomenon at hand as a Bernoulli
-experiment; "[...] the outcome of which can be classified in but one of two
-mutually exclusive and exhaustive ways [...]"
-[@hoggIntroductionMathematicalStatistics p.155].
-
-Let $X$ be a random variable associated with a single vote by defining it as
-follows [@hoggIntroductionMathematicalStatistics, p.155]:
-
-$$X \sim Bern(p=for) = Bern(p = 0.03)$${#eq:Bernoulli}
-
-### Calculate and visualize the proportions
-
-This gives us the following proportions:
-
-<!-- Multi-line $$ $$ break prettier, always extending $$ to the end of file -->
-<!-- $$
-\begin{aligned}
-P(vote=for) &= 0.03\\
-P(vote=against) &= 1 - p = 0.97
-\end{aligned}
-$${#eq:multi_line} -->
-
-These proportions can be best visualized with a column chart^[A
-“[lollipop chart](https://datavizproject.com/data-type/lollipop-chart/)” might
-be even more suitable to visualize a discrete distribution. However, Matplotlib
-does not offer an appropriate plot type for building those.] as generated via
-[@lst:1_1_Bernoulli_py]:
-
-![Bernoulli distribution](output/img/1_1_Bernoulli.pdf){#fig:bernoulli
-width=75%}
-
-\newpage
-
-# Equations
+# Example: Equations
 
 ## Constant of integration
 
@@ -183,10 +141,10 @@ This example demonstrates the use of the filter [`pandoc-latex-environments`] to
 create custom boxes with the [`awesomebox`] package. _pandoc-latex-environment_
 is a pandoc filter for adding LaTeX environement on specific HTML div tags.
 
-THe following examples are taken from
+The following examples are taken from
 <https://github.com/Wandmalfarbe/pandoc-latex-template/tree/master/examples/boxes-with-pandoc-latex-environment-and-awesomebox>:
 
-### Box Types
+## Box Types
 
 For a list of all available boxes and options visit the
 [`awesomebox` documentation](https://ctan.org/pkg/awesomebox).
