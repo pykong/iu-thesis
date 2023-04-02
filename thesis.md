@@ -160,6 +160,8 @@ pandoc-mustache.
 
 Example - my matriculation number is: {{mat-number}}
 
+We can even expand nested variables: {{complex-variable.prop1}}
+
 \newpage
 
 ## Example: Comments
