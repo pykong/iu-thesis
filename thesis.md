@@ -39,6 +39,8 @@ bibliography: [bib/refs.bib]
 csl: bib/apa.csl
 ---
 
+<!-- markdownlint-disable-file MD041 -->
+
 <!-- sections-start -->
 
 !include sections/equations.md
