@@ -114,6 +114,40 @@ pipx install bibcure
 - proselint (PatrykPeszko.vscode-proselint)
   - pipx install proselint
 
+## IU Formatting Guidelines (Workbook Assignment)
+
+- **Paper format:** DIN A4
+- **Page margins:** Top and bottom 2 cm; left 2 cm; right 2 cm
+- **Page numbers:**
+  - Centered at the end of the page
+  - Apart from the title page, all pages must be numbered.
+  - The pages before the body of the text (if applicable, e.g. title page, table
+    of contents, list of tables and abbreviations) should be numbered in Roman
+    capital letters (I, II, III, IV, etc.), with the page number not appearing
+    on page I (title page).
+  - The pages of the text part are numbered with Arabic numbers (1, 2, 3, etc.).
+    These page numbers are continued to the end, i.e., also through the appendix
+    (if applicable).
+- **Font:**
+  - General text - Arial 11 pt.
+  - Headings - 12 pt.
+  - Justified
+  - Footnotes: Arial 10 point, justified
+  - Paragraphs: According to conceptual structure – 6 pt. spacing after line
+    breaks
+- **Line spacing:** 1.5
+- **Sentence:** Justified; hyphenation
+- **Citation standard:** APA
+- **Title page:**
+  - The title page should contain at least the following elements:
+  - type of thesis (Advanced Workbook),
+  - course name,
+  - course of study,
+  - date, author’s name,
+  - matriculation number,
+  - tutor’s name.
+  - _Course-specific adaptations of the information are possible._
+
 ## Notes
 
 ### On prettier
