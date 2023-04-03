@@ -114,7 +114,7 @@ pipx install bibcure
 - proselint (PatrykPeszko.vscode-proselint)
   - pipx install proselint
 
-## IU Formatting Guidelines (Workbook Assignment)
+## IU Formatting Guidelines
 
 - **Paper format:** DIN A4
 - **Page margins:** Top and bottom 2 cm; left 2 cm; right 2 cm
@@ -147,6 +147,15 @@ pipx install bibcure
   - matriculation number,
   - tutor’s name.
   - _Course-specific adaptations of the information are possible._
+- **Sections and subsections:**
+  - A maximum of three levels (1. Main heading, 1.1 Section, 1.1.1 Subheading)
+  - Only individual chapters in the text of the assignment are numbered
+    consecutively
+  - otherwise, sections of the assignment, such as the list of figures and/or
+    tables or the bibliography, are not numbered.
+- **emphasisi:**
+  - Do not underline
+  - use _italics_ sparingly to emphasize passages.
 
 ## Notes
 
