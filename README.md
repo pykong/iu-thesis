@@ -125,37 +125,46 @@ pipx install bibcure
     of contents, list of tables and abbreviations) should be numbered in Roman
     capital letters (I, II, III, IV, etc.), with the page number not appearing
     on page I (title page).
-  - The pages of the text part are numbered with Arabic numbers (1, 2, 3, etc.).
-    These page numbers are continued to the end, i.e., also through the appendix
-    (if applicable).
+  - The introduction should be the first page with Arabic numbering, beginning
+    with “1”.
+    - The pages of the text part are numbered with Arabic numbers (1, 2, 3,
+      etc.). These page numbers are continued to the end, i.e., also through the
+      appendix (if applicable).
 - **Font:**
   - General text - Arial 11 pt.
   - Headings - 12 pt.
   - Justified
   - Footnotes: Arial 10 point, justified
-  - Paragraphs: According to conceptual structure – 6 pt. spacing after line
-    breaks
+  - Paragraphs:
+    - According to conceptual structure
+    - 6 pt. spacing after line breaks
 - **Line spacing:** 1.5
 - **Sentence:** Justified; hyphenation
 - **Citation standard:** APA
-- **Title page:**
-  - The title page should contain at least the following elements:
-  - type of thesis (Advanced Workbook),
+- **Title page:** The title page should contain at least the following elements:
+  - type of thesis (Advanced Workbook / Research Essay / etc. ...)
   - course name,
   - course of study,
   - date, author’s name,
   - matriculation number,
   - tutor’s name.
   - _Course-specific adaptations of the information are possible._
+  - _Master thesis requires morefurther information to be given._
 - **Sections and subsections:**
   - A maximum of three levels (1. Main heading, 1.1 Section, 1.1.1 Subheading)
   - Only individual chapters in the text of the assignment are numbered
     consecutively
   - otherwise, sections of the assignment, such as the list of figures and/or
     tables or the bibliography, are not numbered.
-- **emphasisi:**
+- **emphasis:**
   - Do not underline
   - use _italics_ sparingly to emphasize passages.
+- **page footer:**
+  - The ideal position of the page numbers is centred at the bottom of the page.
+- **page header:**
+  - According to APA standards, the header should contain the title of the
+    thesis or, if it is too long, an abbreviated version (American Psychological
+    Association, 2007, p.288).
 
 ## Notes
 
