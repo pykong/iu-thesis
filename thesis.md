@@ -14,8 +14,6 @@ header-includes:
   - \setlength{\parskip}{6pt}
   - \pagenumbering{roman}
 
-# include-before:
-
 # awesomebox
 pandoc-latex-environment:
   noteblock: [note]
@@ -28,6 +26,8 @@ pandoc-latex-environment:
 lang: "en"
 toc: true
 toc-own-page: true
+# lot: true
+# lof: true
 listings: true
 footnotes-pretty: true
 numbersections: true
@@ -41,6 +41,9 @@ colorlinks: true
 fontsize: 11pt
 linestretch: 1.5
 # geometry: margin=2cm
+footer-left: \null
+footer-center: \thepage
+footer-right: \null
 
 # citation config
 link-citations: true
