@@ -41,8 +41,8 @@ colorlinks: true
 fontsize: 11pt
 linestretch: 1.5
 mainfont: Arial
-sansfont: Arial
-# geometry: margin=2cm
+sansfont: Arial # captions
+geometry: margin=2cm
 header-left: "{{subject}}"
 header-right: "{{title}}"
 footer-left: \null

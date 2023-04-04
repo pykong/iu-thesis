@@ -198,6 +198,8 @@ option, in order to verride the default font.
 
 <https://github.com/Wandmalfarbe/pandoc-latex-template/issues/96#issuecomment-489327543>
 <https://tex.stackexchange.com/questions/234786/how-to-set-a-font-family-with-pandoc>
+<https://tex.stackexchange.com/questions/25249/how-do-i-use-a-particular-font-for-a-small-section-of-text-in-my-document>
+<https://tug.org/FontCatalogue/sourcecodepro/>
 
 ## Links
 
