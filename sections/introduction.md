@@ -17,4 +17,16 @@ dolore deserunt eiusmod exercitation proident sunt ex. Sunt fugiat dolore magna
 magna dolore aute proident veniam eu amet. Reprehenderit in esse culpa
 excepteur.
 
+## Sub-Section (Level 2)
+
+I should be numbered and be included in the TOC
+
+### Sub-Sub-Section (Level 3)
+
+I should be numbered and still be included in the TOC
+
+#### Sub-Sub-Sub-Section (Level 4)
+
+I should be not be included in the TOC.
+
 \newpage
