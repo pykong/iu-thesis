@@ -11,6 +11,8 @@ header-includes:
   - \usepackage{datetime}
   - \usepackage[11pt]{moresize}
   - \usepackage{awesomebox}
+  - \linespread{1.5}
+  - \setlength{\parskip}{6pt}
 
 # awesomebox
 pandoc-latex-environment:
@@ -32,6 +34,10 @@ linkReferences: true
 float-placement-figure: H
 caption-justification: centering
 colorlinks: true
+
+# formatting
+fontsize: 11pt
+# geometry: margin=2cm
 
 # citation config
 link-citations: true
