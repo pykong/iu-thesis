@@ -41,7 +41,9 @@ colorlinks: true
 fontsize: 11pt
 linestretch: 1.5
 mainfont: Arial
-sansfont: Impact # captions
+sansfont: "Nimbus Sans" # captions
+monofont: "Ubuntu Mono"
+mathfont: "Berenis ADF Pro Math"
 geometry: margin=2cm
 header-left: "{{subject}}"
 header-right: "{{title}}"
