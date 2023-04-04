@@ -181,3 +181,9 @@ signs. This annoyingly led to prettier to insert another at the end of the file.
 <https://pandoc.org/MANUAL.html#pandocs-markdown>
 <https://learnxinyminutes.com/docs/make/>
 <https://lierdakil.github.io/pandoc-crossref/>
+
+### pandoc default latex template
+
+It can be insightful to study how pandoc's default latex template is structured and what variables are being used.
+
+[default.latex](https://github.com/jgm/pandoc-templates/blob/master/default.latex)
