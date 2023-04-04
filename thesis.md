@@ -26,8 +26,6 @@ pandoc-latex-environment:
 lang: "en"
 toc: true
 toc-own-page: true
-# lot: true
-# lof: true
 listings: true
 footnotes-pretty: true
 numbersections: true
@@ -37,14 +35,21 @@ float-placement-figure: H
 caption-justification: centering
 colorlinks: true
 
-# formatting
+# fonts
 fontsize: 11pt
 linestretch: 1.5
 mainfont: Arial
 sansfont: "Nimbus Sans" # captions
 monofont: "Ubuntu Mono"
 mathfont: "Berenis ADF Pro Math"
-geometry: margin=2cm
+
+# margins
+margin-top: 3cm
+margin-bottom: 3cm
+margin-left: 2cm
+margin-right: 2cm
+
+# header & footer
 header-left: "{{subject}}"
 header-right: "{{title}}"
 footer-left: \null
