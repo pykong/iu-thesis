@@ -117,7 +117,9 @@ pipx install bibcure
 ## IU Formatting Guidelines
 
 - **Paper format:** DIN A4
-- **Page margins:** Top and bottom 2 cm; left 2 cm; right 2 cm
+- **Page margins:**
+  - Top and bottom 2 cm;
+  - left 2 cm; right 2 cm
 - **Page numbers:**
   - Centered at the end of the page
   - Apart from the title page, all pages must be numbered.
@@ -166,6 +168,19 @@ pipx install bibcure
     thesis or, if it is too long, an abbreviated version (American Psychological
     Association, 2007, p.288).
 
+## Pandoc Options
+
+### MAN pages
+
+The man pages of pandoc are extensive: `man pandoc`
+
+### default latex template
+
+It can be insightful to study how pandoc's default latex template is structured
+and what variables are being used.
+
+[default.latex](https://github.com/jgm/pandoc-templates/blob/master/default.latex)
+
 ## Notes
 
 ### On prettier
@@ -181,9 +196,3 @@ signs. This annoyingly led to prettier to insert another at the end of the file.
 <https://pandoc.org/MANUAL.html#pandocs-markdown>
 <https://learnxinyminutes.com/docs/make/>
 <https://lierdakil.github.io/pandoc-crossref/>
-
-### pandoc default latex template
-
-It can be insightful to study how pandoc's default latex template is structured and what variables are being used.
-
-[default.latex](https://github.com/jgm/pandoc-templates/blob/master/default.latex)
