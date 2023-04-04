@@ -14,8 +14,7 @@ header-includes:
   - \setlength{\parskip}{6pt}
   - \pagenumbering{roman}
 
-include-before:
-  - \pagenumbering{arabic}
+# include-before:
 
 # awesomebox
 pandoc-latex-environment:
@@ -50,6 +49,11 @@ csl: bib/apa.csl
 ---
 
 <!-- markdownlint-disable-file MD041 -->
+
+<!-- prettier-ignore-start -->
+\pagenumbering{arabic}
+\setcounter{page}{1}
+<!-- prettier-ignore-end -->
 
 <!-- sections-start -->
 
