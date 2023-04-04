@@ -11,8 +11,11 @@ header-includes:
   - \usepackage{datetime}
   - \usepackage[11pt]{moresize}
   - \usepackage{awesomebox}
-  - \linespread{1.5}
   - \setlength{\parskip}{6pt}
+  - \pagenumbering{roman}
+
+include-before:
+  - \pagenumbering{arabic}
 
 # awesomebox
 pandoc-latex-environment:
@@ -37,6 +40,7 @@ colorlinks: true
 
 # formatting
 fontsize: 11pt
+linestretch: 1.5
 # geometry: margin=2cm
 
 # citation config
@@ -48,6 +52,8 @@ csl: bib/apa.csl
 <!-- markdownlint-disable-file MD041 -->
 
 <!-- sections-start -->
+
+!include sections/introduction.md
 
 !include sections/equations.md
 
