@@ -191,6 +191,14 @@ signs. This annoyingly led to prettier to insert another at the end of the file.
 
 <https://github.com/executablebooks/mdformat#why-not-use-prettier-instead>
 
+## Changing fonts
+
+The Eisvogel template requires compilation via the `--pdf-engine=xelatex`
+option, in order to verride the default font.
+
+<https://github.com/Wandmalfarbe/pandoc-latex-template/issues/96#issuecomment-489327543>
+<https://tex.stackexchange.com/questions/234786/how-to-set-a-font-family-with-pandoc>
+
 ## Links
 
 <https://pandoc.org/MANUAL.html#pandocs-markdown>
