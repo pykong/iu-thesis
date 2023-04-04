@@ -41,6 +41,8 @@ colorlinks: true
 fontsize: 11pt
 linestretch: 1.5
 # geometry: margin=2cm
+header-left: "{{subject}}"
+header-right: "{{title}}"
 footer-left: \null
 footer-center: \thepage
 footer-right: \null
