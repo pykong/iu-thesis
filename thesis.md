@@ -12,6 +12,7 @@ header-includes:
   - \usepackage[11pt]{moresize}
   - \usepackage{awesomebox}
   - \setlength{\parskip}{6pt}
+  - \renewcommand{\footnotesize}{\small}
 
 # awesomebox
 pandoc-latex-environment:

@@ -15,8 +15,7 @@ cupidatat fugiat elit quis reprehenderit. Aliqua cupidatat occaecat in laboris
 dolor occaecat ad quis velit. Quis voluptate laborum tempor sunt excepteur
 dolore deserunt eiusmod exercitation proident sunt ex. Sunt fugiat dolore magna
 magna dolore aute proident veniam eu amet. Reprehenderit in esse culpa
-excepteur^[I AM A FOOTNOTE. I AM A FOOTNOTE. I AM A FOOTNOTE. I AM A FOOTNOTE. I
-AM A FOOTNOTE. I AM A FOOTNOTE. I AM A FOOTNOTE. I AM A FOOTNOTE.].
+excepteur^[Ipsum exercitation sint consequat excepteur.].
 
 ## Sub-Section (Level 2)
 
