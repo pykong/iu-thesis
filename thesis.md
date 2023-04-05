@@ -1,6 +1,6 @@
 ---
 # title page
-titlepage: false
+titlepage: true
 
 # variables
 mustache: variables.yaml
@@ -12,7 +12,6 @@ header-includes:
   - \usepackage[11pt]{moresize}
   - \usepackage{awesomebox}
   - \setlength{\parskip}{6pt}
-  - \pagenumbering{Roman}
 
 # awesomebox
 pandoc-latex-environment:
