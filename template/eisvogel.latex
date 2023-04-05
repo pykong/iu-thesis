@@ -867,7 +867,7 @@ $else$
 		\ofoot*{$if(footer-right)$$footer-right$$else$\thepage$endif$}
 		\addtokomafont{pageheadfoot}{\upshape}
 	}
-	\pagestyle{eisvogel-header-footer}
+	\pagestyle{plain}
 
 $if(book)$
 	\deftripstyle{ChapterStyle}{}{}{}{}{\pagemark}{}
@@ -987,9 +987,11 @@ $endif$
 
 %%
 %% begin custom code - before body
+%% - pagestyle eisvogel-header-footer
 %% - arabic pagenumbering
 %% - reset pagecounter
 %%
+\pagestyle{eisvogel-header-footer}
 \pagenumbering{arabic}
 \setcounter{page}{1}
 %%
