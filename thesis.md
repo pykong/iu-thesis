@@ -63,11 +63,6 @@ csl: bib/apa.csl
 
 <!-- markdownlint-disable-file MD041 -->
 
-<!-- prettier-ignore-start -->
-\pagenumbering{arabic}
-\setcounter{page}{1}
-<!-- prettier-ignore-end -->
-
 <!-- sections-start -->
 
 !include sections/introduction.md

@@ -863,7 +863,7 @@ $else$
 		\chead*{$if(header-center)$$header-center$$else$$endif$}
 		\ohead*{$if(header-right)$$header-right$$else$$date$$endif$}
 		\ifoot*{$if(footer-left)$$footer-left$$else$$for(author)$$author$$sep$, $endfor$$endif$}
-		\cfoot*{$if(footer-center)$$footer-center$$else$$endif$}
+		\cfoot*{$if(footer-center)$\large{$footer-center$}$else$$endif$}
 		\ofoot*{$if(footer-right)$$footer-right$$else$\thepage$endif$}
 		\addtokomafont{pageheadfoot}{\upshape}
 	}
@@ -984,6 +984,18 @@ $endif$
 $if(has-frontmatter)$
 \mainmatter
 $endif$
+
+%%
+%% begin custom code - before body
+%% - arabic pagenumbering
+%% - reset pagecounter
+%%
+\pagenumbering{arabic}
+\setcounter{page}{1}
+%%
+%% end custom code - before body
+%%
+
 $body$
 
 $if(has-frontmatter)$
