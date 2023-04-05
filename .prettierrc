@@ -1,0 +1,11 @@
+{
+  "tabWidth": 4,
+  "useTabs": false,
+  "proseWrap": "always",
+  "overrides": [
+    {
+      "files": ["*.md", "*.yaml", "*.yml", ".prettierrc"],
+      "options": { "tabWidth": 2 }
+    }
+  ]
+}

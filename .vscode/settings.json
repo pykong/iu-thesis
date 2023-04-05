@@ -1,0 +1,45 @@
+{
+    "editor.wordWrapColumn": 88,
+    "git.ignoreLimitWarning": true,
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll": true,
+            "source.organizeImports": true
+        }
+    },
+    "[markdown]": {
+        "editor.quickSuggestions": {
+            "comments": "on",
+            "strings": "on",
+            "other": "on"
+        }
+    },
+    "prettier.prettierPath": "${workspaceFolder}/.prettierrc",
+    "python.linting.flake8Enabled": false,
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "python.formatting.provider": "black",
+    "python.formatting.blackPath": "${workspaceFolder}/code/.venv/bin/black",
+    "python.testing.pytestEnabled": true,
+    "python.testing.pytestPath": "${workspaceFolder}/code/.venv/bin/pytest",
+    "isort.path": ["${workspaceFolder}/code/.venv/bin/isort"],
+    "isort.args": ["--profile", "black"],
+    "ruff.path": ["${workspaceFolder}/code/.venv/bin/ruff"],
+    "ruff.organizeImports": false,
+    "markdownlint.config": {
+        "default": true,
+        "MD025": false,
+        "MD033": false
+    },
+    "PandocCiter.RootFile": "${workspaceFolder}/thesis.md",
+    "PandocCiter.DefaultBib": "${workspaceFolder}/bib/refs.bib",
+    "PandocCiter.ViewType": "browser",
+    "PandocCiter.CitationFormat": [
+        "author",
+        "title",
+        "journal",
+        "publisher",
+        "booktitle",
+        "year"
+    ]
+}

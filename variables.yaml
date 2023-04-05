@@ -1,0 +1,15 @@
+title: "Inference and Causality"
+subject: "Workbook Assignment"
+keywords: [statistics, Bayesian]
+first-name: "Benjamin"
+last-name: "Felder"
+course-id: DLMAIIAC01
+mat-number: "3200856"
+reviewers:
+  - { name: "John Doe", function: "Tutor", institution: "Duff Corp" }
+  - { name: "Jane Doe", function: "Prof", institution: "ACME Corp" }
+
+complex-variable:
+  prop1: aaa
+  prop2: 123
+  prop3: true

@@ -1,24 +1,21 @@
 # https://learnxinyminutes.com/docs/make/
 SHELL = /usr/bin/bash
 
-PDF_TITLE = "Workbook for Inference and Causality"
+VAR_FILE = variables.yaml
+BIB_FILE = bib/refs.bib
 
 # output file name
 DATE = $$(date '+%Y%m%d')
-FNAME = Benjamin
-LNAME = Felder
-MAT_NUM = 3200856
-COURSE_ID = DLMAIIAC01
+FNAME = $$(niet first-name ${VAR_FILE})
+LNAME = $$(niet last-name ${VAR_FILE})
+MAT_NUM = $$(niet mat-number ${VAR_FILE})
+COURSE_ID = $$(niet course-id ${VAR_FILE})
 OUTPUT_FILE = ${DATE}_${LNAME}_${FNAME}_${MAT_NUM}_${COURSE_ID}.pdf
 
 build:
-	$(cover_page)
 	$(export_listings)
 	$(run_code)
 	$(compile_thesis)
-
-cover_page:
-	$(cover_page)
 
 export_listings:
 	$(export_listings)
@@ -32,18 +29,23 @@ generate_plantuml:
 compile_thesis:
 	$(compile_thesis)
 
+compile_complete_document:
+	$(compile_complete_document)
 
-define cover_page
-	@echo "Creating cover page"
-	@pdflatex\
-		-output-directory=output\
-		-quiet\
-		./template/cover.tex
-endef
+tidy_bib:
+	$(tidy_bib)
+
+update_bib:
+	$(update_bib)
+	$(tidy_bib)
+
 
 define export_listings
 	@echo "Exporting listings"
-	@code/.venv/bin/python code/utils/export_listings.py code output/listings.md
+	@code/.venv/bin/python\
+		code/utils/export_listings.py\
+		code output/listings.md\
+		# --tree
 endef
 
 define run_code
@@ -55,45 +57,39 @@ define generate_plantuml
 	@plantuml plantuml/*.puml -tsvg -o ../output/plantuml
 endef
 
-define attach_cover
-	@pdfunite output/cover.pdf output/thesis.pdf output/merged.pdf
-endef
-
-define resize_pdf
-	# normalize all pages of pdf to DINA4
-	# offset needed to prevent white line above triangle on cover page
-	@pdfjam\
-		--outfile output/merged.pdf\
-		--paper a4paper\
-		--offset '0.0cm 0.6mm'\
-		output/merged.pdf
-endef
-
-define rename_pdf
-	@mv output/merged.pdf output/${OUTPUT_FILE}
-endef
-
-define add_metadata
-	@pdfjam\
-		--outfile output/${OUTPUT_FILE}\
-		--pdfauthor "${FNAME} ${LNAME}"\
-		--pdftitle ${PDF_TITLE}\
-		--pdfsubject "Assignment for ${COURSE_ID}"\
-		output/${OUTPUT_FILE}
-endef
-
 define compile_thesis
 	@echo "Compiling thesis"
 	@pandoc\
-		thesis.md output/listings.md -o output/thesis.pdf\
-		--from markdown\
+		thesis.md -o output/${OUTPUT_FILE}\
+		-s -V papersize:a4\
 		--template=template/eisvogel.latex\
+		--metadata-file=variables.yaml\
+		--pdf-engine=xelatex\
+		--filter pandoc-include\
+		--filter pantable\
 		--filter pandoc-crossref\
+		--filter pandoc-mustache\
+		--filter pandoc-latex-environment\
 		--listings\
-		--citeproc\
-		--pdf-engine-opt=-shell-escape
-	$(attach_cover)
-	$(resize_pdf)
-	$(rename_pdf)
-	$(add_metadata)
+		--citeproc
+endef
+
+define tidy_bib
+	@bibtex-tidy\
+		${BIB_FILE}\
+		--curly\
+		--numeric\
+		--tab\
+		--align=13\
+		--sort=year\
+		--duplicates=key,doi,citation\
+		--merge=combine\
+		--no-escape\
+		--sort-fields\
+		--trailing-commas\
+		--wrap=80
+endef
+
+define update_bib
+	@bibcure -i ${BIB_FILE} -o ${BIB_FILE}
 endef
