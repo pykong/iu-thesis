@@ -50,7 +50,10 @@ endef
 
 define run_code
 	@echo "Running all code"
-	@cd code; fish run_all.fish
+    @for file in $(wildcard $(CURDIR)/code/*.py); do \
+        echo "Running $$file"; \
+        $(CURDIR)/code/.venv/bin/python "$$file"; \
+    done
 endef
 
 define generate_plantuml
