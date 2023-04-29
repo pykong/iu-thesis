@@ -8,6 +8,8 @@ author: "{{first-name}} {{last-name}}"
 
 # additional LaTeX packages
 header-includes:
+  # strangely it flakely does not compile without graphicx
+  - \usepackage{graphicx}
   - \usepackage{datetime}
   - \usepackage[11pt]{moresize}
   - \usepackage{awesomebox}
