@@ -8,6 +8,7 @@ author: "{{first-name}} {{last-name}}"
 
 # additional LaTeX packages
 header-includes:
+  - \setcounter{secnumdepth}{3}
   # strangely it flakely does not compile without graphicx
   - \usepackage{graphicx}
   - \usepackage{datetime}
