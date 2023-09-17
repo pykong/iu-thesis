@@ -1,5 +1,8 @@
 # IU-Thesis
 
+Template repository for theses at IU, written in markdown compiled via `pandoc` to beautiful PDF.
+Based on the [Eisvogel](https://github.com/Wandmalfarbe/pandoc-latex-template) template.
+
 ## Installing pdflatex
 
 <https://gist.github.com/rain1024/98dd5e2c6c8c28f9ea9d>
@@ -25,17 +28,17 @@ Get them from here:
 ## Cover Page Hack
 
 The title page section has been overwritten in the Eisvogel template with a
-pandoc template partial, in order to provide a custom cover that can still
-expand pandoc's variables. See issue on the Eisvogel GitHub for further details:
+pandoc template partial to provide a custom cover that can still
+expand pandoc's variables. See the issue on the Eisvogel GitHub for further details:
 
 <https://github.com/Wandmalfarbe/pandoc-latex-template/issues/260>
 
 ## Diagrams
 
-Currently PlantUML diagrams are exported to SVG via a custom make target and
-afterwards included as a figure. In the future
+PlantUML diagrams are exported to SVG via a custom make target and
+afterward included as a figure. In the future
 [pandoc-plot](https://github.com/LaurentRDC/pandoc-plot) might be used for that
-purpose. The diagram code might be even imported via pandoc-include into the
+purpose. The diagram code might even be imported via pandoc-include into the
 code block.
 
 ## Dependencies
@@ -138,7 +141,7 @@ pipx install bibcure
   - Justified
   - Footnotes: Arial 10 point, justified
   - Paragraphs:
-    - According to conceptual structure
+    - According to the conceptual structure
     - 6 pt. spacing after line breaks
 - **Line spacing:** 1.5
 - **Sentence:** Justified; hyphenation
@@ -151,18 +154,18 @@ pipx install bibcure
   - matriculation number,
   - tutor’s name.
   - _Course-specific adaptations of the information are possible._
-  - _Master thesis requires morefurther information to be given._
+  - _Master thesis requires more further information to be given._
 - **Sections and subsections:**
   - A maximum of three levels (1. Main heading, 1.1 Section, 1.1.1 Subheading)
   - Only individual chapters in the text of the assignment are numbered
     consecutively
   - otherwise, sections of the assignment, such as the list of figures and/or
-    tables or the bibliography, are not numbered.
+    tables or the bibliography are not numbered.
 - **emphasis:**
   - Do not underline
   - use _italics_ sparingly to emphasize passages.
 - **page footer:**
-  - The ideal position of the page numbers is centred at the bottom of the page.
+  - The ideal position of the page numbers is centered at the bottom.
 - **page header:**
   - According to APA standards, the header should contain the title of the
     thesis or, if it is too long, an abbreviated version (American Psychological
@@ -172,7 +175,7 @@ pipx install bibcure
 
 ### MAN pages
 
-The man pages of pandoc are extensive: `man pandoc`
+The man pages of `pandoc` are extensive: `man pandoc`
 
 ### default latex template
 
@@ -185,7 +188,7 @@ and what variables are being used.
 
 ### On prettier
 
-This project is using prettier for formatting markdown files. Unfortunately,
+This project uses prettier for formatting markdown files. Unfortunately,
 prettier screws up when encountering a multiline math block using double dollar
 signs. This annoyingly led to prettier to insert another at the end of the file.
 
@@ -194,7 +197,7 @@ signs. This annoyingly led to prettier to insert another at the end of the file.
 ## Changing fonts
 
 The Eisvogel template requires compilation via the `--pdf-engine=xelatex`
-option, in order to verride the default font.
+option to override the default font.
 
 <https://github.com/Wandmalfarbe/pandoc-latex-template/issues/96#issuecomment-489327543>
 <https://tex.stackexchange.com/questions/234786/how-to-set-a-font-family-with-pandoc>
