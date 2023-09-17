@@ -1,6 +1,6 @@
 # IU-Thesis
 
-Template repository for theses at IU, written in markdown compiled via `pandoc` to beautiful PDF.
+Template repository for theses at [IU](https://www.iu.de/en/), written in markdown compiled via `pandoc` to beautiful PDF.
 
 - based on the [Eisvogel](https://github.com/Wandmalfarbe/pandoc-latex-template) template,
 - customized to suit IU formatting guidelines
