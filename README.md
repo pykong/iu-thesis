@@ -11,6 +11,7 @@ Template repository for theses at [IU](https://www.iu.de/en/), written in markdo
   - table import from CSV
   - diagram generation
   - formatting
+  - awesome boxes
 
 ## Installation
 
