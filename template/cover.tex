@@ -9,20 +9,21 @@
 % Cover Logo
 \centerline{\includegraphics[width=\paperwidth]{template/img/cover-image.png}}
 
-\vspace{8.5em}
+\vspace{1.0em}
 
 % Main Text Block
-\LARGE{$subject$}\medskip\\
-\HUGE\textbf{$title$}\\
-\Huge{$course-id$}\\
-\Huge{$author$}\\
-\LARGE{Student Id: $mat-number$}\medskip\\
+\LARGE{$assignment-type$}\bigskip\\
+\HUGE\textbf{$title$}\smallskip\\
+\parbox{15.0em}{\huge\textbf{$subtitle$}\bigskip}\\
+\LARGE{$course-id$} - {$course-name$}\\
+\LARGE{$author$} ($mat-number$)\smallskip\\
 \LARGE\textit{\germandatetime\today}
 
-\vspace*{\fill}
+\vspace{\fill}
 
 %  Reviewers Block
-\begin{tabular}{p{1.2in} p{1.5in} p{1.5in} p{1.5in}}
+\hspace{-0.145in}
+\begin{tabular}{p{1.15in} p{1.5in} p{1.5in} p{1.5in}}
     \textbf{Reviewers:} &
     $for(reviewers)$
         \begin{spacing}{0.75}
@@ -37,3 +38,4 @@
 
 \restoregeometry{}
 \clearpage
+
