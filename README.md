@@ -1,9 +1,20 @@
 # IU-Thesis
 
 Template repository for theses at IU, written in markdown compiled via `pandoc` to beautiful PDF.
-Based on the [Eisvogel](https://github.com/Wandmalfarbe/pandoc-latex-template) template.
 
-## Installing pdflatex
+- based on the [Eisvogel](https://github.com/Wandmalfarbe/pandoc-latex-template) template,
+- customized to suit IU formatting guidelines
+- custom cover page
+- a `make` compile chain including pandoc-filters for all needs of academic writing:
+  - citation
+  - referencing tables, figures, and sections
+  - table import from CSV
+  - diagram generation
+  - formatting
+
+## Installation
+
+### Installing pdflatex
 
 <https://gist.github.com/rain1024/98dd5e2c6c8c28f9ea9d>
 
@@ -11,7 +22,7 @@ Based on the [Eisvogel](https://github.com/Wandmalfarbe/pandoc-latex-template) t
 sudo apt-get install texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
 ```
 
-## Installing LaTeX
+### Installing LaTeX
 
 Consult the Eisvogel installation instructions:
 
@@ -19,43 +30,43 @@ Consult the Eisvogel installation instructions:
 
 Note: Installing MikTeX caused compile errors.
 
-## Citation Styles
+### Citation Styles
 
 Get them from here:
 
 <https://github.com/citation-style-language/styles>
 
-## Cover Page Hack
+### Cover Page Hack
 
 The title page section has been overwritten in the Eisvogel template with a
-pandoc template partial to provide a custom cover that can still
+`pandoc` template partial to provide a custom cover that can still
 expand pandoc's variables. See the issue on the Eisvogel GitHub for further details:
 
 <https://github.com/Wandmalfarbe/pandoc-latex-template/issues/260>
 
-## Diagrams
+### Diagrams
 
-PlantUML diagrams are exported to SVG via a custom make target and
+PlantUML diagrams are exported to SVG via a custom `make` target and
 afterward included as a figure. In the future
 [pandoc-plot](https://github.com/LaurentRDC/pandoc-plot) might be used for that
 purpose. The diagram code might even be imported via pandoc-include into the
 code block.
 
-## Dependencies
+### Dependencies
 
-### niet
+#### niet
 
 ```sh
 pipx install niet
 ```
 
-### plantuml
+#### plantuml
 
 ```sh
 sudo apt install plantuml
 ```
 
-### pandoc-include
+#### pandoc-include
 
 <https://github.com/DCsunset/pandoc-include>
 
@@ -63,7 +74,7 @@ sudo apt install plantuml
 pipx install pandoc-include
 ```
 
-### pandoc-mustache
+#### pandoc-mustache
 
 <https://github.com/michaelstepner/pandoc-mustache>
 
@@ -71,7 +82,7 @@ pipx install pandoc-include
 pipx install pandoc-mustache
 ```
 
-### pantable
+#### pantable
 
 <https://github.com/ickc/pantable>
 
@@ -79,7 +90,7 @@ pipx install pandoc-mustache
 pipx install pantable
 ```
 
-### pandoc-latex-environment
+#### pandoc-latex-environment
 
 <https://github.com/chdemko/pandoc-latex-environment>
 
@@ -87,7 +98,7 @@ pipx install pantable
 pipx install pandoc-latex-environment
 ```
 
-### bibtex-tidy
+#### bibtex-tidy
 
 <https://www.npmjs.com/package/bibtex-tidy>
 <https://flamingtempura.github.io/bibtex-tidy>
@@ -96,7 +107,7 @@ pipx install pandoc-latex-environment
 npm install -g bibtex-tidy
 ```
 
-### bibcure
+#### bibcure
 
 <https://github.com/bibcure/bibcure>
 
@@ -110,7 +121,7 @@ pipx install bibcure
 - Markdown+Math (goessner.mdmath)
 - markdownlint (DavidAnson.vscode-markdownlint)
 - Pandoc Citer (notZaki.pandocciter)
-  - cross-ref does not work across file boundaries, when using multiple md
+  - cross-ref does not work across file boundaries when using multiple md
     files: <https://github.com/notZaki/PandocCiter/issues/37>
 - LanguageTool for Visual Studio Code (adamvoss.vscode-languagetool)
   - English Support for LanguageTool (adamvoss.vscode-languagetool-en)
