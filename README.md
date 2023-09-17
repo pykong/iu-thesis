@@ -220,3 +220,7 @@ option to override the default font.
 <https://pandoc.org/MANUAL.html#pandocs-markdown>
 <https://learnxinyminutes.com/docs/make/>
 <https://lierdakil.github.io/pandoc-crossref/>
+
+## Contributions
+
+If you want to improve further `iu-thesis`, open a pull request. Your contributions are warmly welcome. 🤗
